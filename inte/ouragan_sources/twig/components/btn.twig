@@ -1,0 +1,57 @@
+{# ##########################################################################################
+########################################## USAGE #########################################
+########################################################################################## #}
+
+{#
+    {% include '@components/btn.twig' with {
+        'text': 'Lorem ipsum',
+        'color': 'blue',
+        'size': 'medium', ['xsmall', 'small', 'medium']
+        'type': 'anchor', ['btn', 'submit_btn', 'anchor', 'new_tab_anchor']
+        'url': '#',
+        'additionnal_attributes': {},
+        'additionnal_classes': ''
+    } %}
+#}
+
+{# ##########################################################################################
+########################################## CODE ##########################################
+########################################################################################## #}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_css('public/assets/css/components/btn.css', 2) }}
+    {% endif %}
+{% endif %}
+
+{% set class = 'btn btn-' ~ color ~ ' btn-' ~ size %}
+{% if additionnal_classes %}
+    {% set class = class ~ ' ' ~ additionnal_classes|trim %}
+{% endif %}
+
+{% if type == 'anchor' or type == 'new_tab_anchor' %}
+    <a href="{{ url }}"{% if type == 'new_tab_anchor' %} target="_blank" rel="noopener"{% endif %}
+       class="{{ class }}"
+    {% for key, additionnal_attr in additionnal_attributes %}
+        {{ key }}="{{ additionnal_attr }}"
+    {% endfor %}
+    >
+{% else %}
+    <button
+        {% if type == 'submit_btn' %}
+            type="submit"
+        {% else %}
+            type="button"
+        {% endif %}
+            class="{{ class }}"
+    {% for key, additionnal_attr in additionnal_attributes %}
+        {{ key }}="{{ additionnal_attr }}"
+    {% endfor %}
+    >
+{% endif %}
+<span class="text">{{ text|trim }}</span>
+{% if type == 'anchor' or type == 'new_tab_anchor' %}
+    </a>
+{% else %}
+    </button>
+{% endif %}

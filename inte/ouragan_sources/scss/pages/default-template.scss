@@ -1,0 +1,48 @@
+@import '../includes/variables';
+
+.page-default-template {
+    padding: 70px 0;
+    min-height: 500px;
+
+    .title-large {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    h5, h6 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 27px;
+        margin-bottom: 20px;
+    }
+
+    ul, ol {
+        margin-bottom: 20px;
+        list-style: initial;
+        padding-left: 20px;
+
+        li {
+            font-size: 20px;
+            line-height: 27px;
+        }
+    }
+}

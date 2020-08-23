@@ -1,0 +1,30 @@
+@import '../../includes/variables';
+
+#popup-initials {
+    padding: 20px;
+    max-width: 670px;
+
+    @media screen and (min-width: $tablet-medium) {
+        padding: 50px;
+    }
+
+    .wrap-info .image {
+        width: 214px;
+    }
+
+    .wrap-total {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        margin: 25px 0;
+        border-top: 1px solid #e8e8e8;
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 600;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin: 50px 0 25px;
+        }
+    }
+
+}

@@ -1,0 +1,30 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+.parsley-errors-list {
+    display: none;
+}
+
+.parsley-error {
+    border: 1px solid #ff6363 !important;
+
+    ~ .label-error {
+        display: block;
+    }
+}
+.label-error {
+    display: none;
+    color: #ff6363;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.checkbox-group.parsley-error {
+   border: 0;
+
+    input + label {
+        &:before {
+            border: 1px solid #ff6363;
+        }
+    }
+}

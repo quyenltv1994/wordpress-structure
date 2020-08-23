@@ -1,0 +1,354 @@
+@import '../includes/variables';
+
+.open-popup {
+    overflow: hidden;
+
+    body {
+        &.animation-page {
+            height: auto;
+        }
+
+        &:before {
+            opacity: 1;
+            z-index: 9999;
+        }
+
+        #header .top-header {
+            background-color: transparent;
+        }
+    }
+
+    .popup-right.active {
+        transform: translateX(0);
+    }
+
+    .popup-center.active {
+        visibility: visible;
+        opacity: 1;
+        transition-duration: 0.5s;
+    }
+}
+
+[data-popup] {
+    cursor: pointer;
+}
+
+.popup-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+    z-index: 9999;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all .5s;
+    padding: 70px 20px;
+
+    @media screen and (min-width: $tablet-medium) {
+        width: 500px;
+        padding: 100px 60px;
+    }
+
+    .icon-cross {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+        z-index: 1;
+
+        &:before {
+            color: $dark-grey;
+        }
+    }
+}
+
+.popup-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    padding: 20px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.2s;
+    max-width: 780px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    @media screen and (min-width: $tablet-medium) {
+        padding: 40px;
+        height: auto;
+    }
+
+    .icon-cross {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+        z-index: 9;
+
+        &:before {
+            color: $dark-grey;
+        }
+    }
+
+    .wrap-info {
+        @media screen and (min-width: $tablet-medium) {
+            display: flex;
+        }
+
+        .image {
+            width: 282px;
+            flex-shrink: 0;
+        }
+
+        .info {
+            margin: 24px 0 0;
+
+            @media screen and (min-width: $tablet-medium) {
+                margin: 24px 0 0 40px;
+            }
+
+            .title2 {
+                margin-bottom: 20px;
+                font-size: 30px;
+                line-height: 30px;
+            }
+
+            .descriptions {
+                margin-bottom: 35px;
+                font-size: 20px;
+                line-height: 32px;
+            }
+
+            .form-group {
+                margin-bottom: 0;
+
+                .form-control.error {
+                    border: 1px solid #ff6363;
+                }
+
+                .wrap-input {
+                    display: flex;
+                    justify-content: space-between;
+
+                    button {
+                        margin-left: 10px;
+                        padding: 10px 16px;
+                        font-size: 16px;
+                        background-color: $black;
+                        color: $white;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+
+            .des-bottom {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.wmpci-popup-close-html {
+    &.wmpci-popup-open {
+        .wrap-cursor {
+            opacity: 1;
+        }
+
+        #wmpci-popup-wrp {
+            display: none;
+        }
+    }
+}
+
+.wmpci-popup-open {
+    @media screen and (max-width: $desktop-small - 1) {
+        position: fixed;
+    }
+
+    .wmpci-popup-wrp.splash {
+        background: rgba($dark-grey, 0.22) none repeat scroll 0 0;
+
+        @media screen and (max-width: $tablet-medium - 1) {
+        top: 20px;
+            bottom: 20px;
+            overflow-y: initial;
+        }
+    }
+
+    .wrap-cursor {
+        opacity: 0;
+    }
+
+    .wmpci-popup-body {
+        background-color: $white;
+        color: $dark-grey;
+        max-width: 780px;
+        width: 100%;
+        border: 0;
+        padding: 40px;
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            height: calc(100% - 40px);
+            overflow-y: auto;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .wmpci-popup-close {
+            font-family: 'icomoon' !important;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            z-index: 9;
+            font-size: 17px;
+            background: none;
+            height: 20px;
+            width: 20px;
+
+            @media screen and (max-width: $tablet-medium - 1) {
+                top: 18px;
+                right: 13px;
+            }
+
+            &:before {
+                content: '\e90d';
+            }
+        }
+
+        .wpmci-popup-cnt-inr-wrp {
+            padding: 0;
+            text-align: left;
+
+            @media screen and (max-width: $desktop-small - 1) {
+                overflow: hidden;
+            }
+        }
+
+        #popup-newsletter-custom {
+            .icon-cross {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                cursor: pointer;
+                z-index: 9;
+                font-size: 17px;
+                display: none;
+
+                &:before {
+                    color: $dark-grey;
+                }
+            }
+
+            .tnp-subscription {
+                margin: 0;
+
+                form {
+                    display: flex;
+
+                    .tnp-field-email {
+                        width: 100%;
+                        margin-bottom: 0;
+
+                        > label {
+                            display: none;
+                        }
+
+                        .tnp-email {
+                            display: block;
+                            width: 100%;
+                            padding: 12px 15px;
+                            border: 1px solid #d6d5d5;
+                            font-size: 16px;
+                            height: auto;
+                            background: transparent;
+                        }
+                    }
+
+                    .tnp-field-button {
+                        margin: 0 0 0 10px;
+                        flex-shrink: 0;
+
+                        .tnp-submit {
+                            padding: 15px 16px 11px;
+                            font-size: 16px;
+                            background-color: $black;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            .wrap-info {
+                @media screen and (min-width: $tablet-medium) {
+                    display: flex;
+                }
+
+                .image {
+                    width: 282px;
+                    flex-shrink: 0;
+                }
+
+                .info {
+                    margin: 24px 0 0;
+
+                    @media screen and (min-width: $tablet-medium) {
+                        margin: 24px 0 0 40px;
+                    }
+
+                    .title2 {
+                        margin-bottom: 20px;
+                        font-size: 30px;
+                        line-height: 30px;
+                    }
+
+                    .descriptions {
+                        margin-bottom: 35px;
+                        font-size: 20px;
+                        line-height: 32px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 0;
+
+                        .form-control.error {
+                            border: 1px solid #ff6363;
+                        }
+
+                        .wrap-input {
+                            display: flex;
+                            justify-content: space-between;
+
+                            button {
+                                margin-left: 10px;
+                                padding: 10px 16px;
+                                font-size: 16px;
+                                background-color: $black;
+                                color: $white;
+                                flex-shrink: 0;
+                            }
+                        }
+                    }
+
+                    .des-bottom {
+                        font-size: 17px;
+                        margin-top: 30px;
+
+                        p {
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

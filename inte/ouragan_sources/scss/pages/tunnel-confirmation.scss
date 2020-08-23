@@ -1,0 +1,57 @@
+@import '../includes/variables';
+
+.block-tunnel-confirmation {
+    margin: 25px 0 55px;
+
+    @media screen and (min-width: $tablet-medium) {
+        margin: 55px 0;
+    }
+
+    .title2 {
+        margin-bottom: 12px;
+    }
+
+    .descriptions {
+        font-size: 20px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+
+    .cart-table {
+        @media screen and (min-width: 1201px) {
+            width: 840px;
+        }
+
+        @media screen and (min-width: $tablet-medium) and (max-width: 1200px) {
+            width: 100%;
+        }
+
+        .product-quantity {
+            padding-top: 35px;
+
+            @media screen and (max-width: $tablet-medium - 1) {
+                padding: 22px 20px 18px;
+            }
+        }
+
+        .product-info {
+            img {
+                height: auto;
+            }
+        }
+    }
+
+    .btn {
+        margin-bottom: 40px;
+    }
+
+    .col-right {
+        @media screen and (min-width: $desktop-small) {
+            padding-left: 80px;
+        }
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            margin-top: 25px;
+        }
+    }
+}

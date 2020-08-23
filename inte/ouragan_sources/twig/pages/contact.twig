@@ -1,0 +1,149 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} contact-html{% endblock %}
+{% block bodyclass %}{{ parent() }} contact-body{% endblock %}
+
+{% block title %}contact - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-contact-page">
+        <div class="wrapper">
+            <div class="row">
+          <div class="col-7 col-left">
+              <div class="info">
+              <h2 class="title-large">Nous envoyer un message ?</h2>
+
+              <form action="#">
+                  <div class="form-group">
+                      <label>Email</label>
+                      <input type="text" class="form-control" placeholder="Mon email">
+                  </div>
+
+                  <div class="form-group">
+                      <label>Nom</label>
+                      <input type="text" class="form-control" placeholder="Mon nom">
+                  </div>
+
+                  <div class="form-group">
+                      <label>Prénom</label>
+                      <input type="text" class="form-control" placeholder="Mon prénom">
+                  </div>
+
+                  <div class="form-group">
+                      <label>Message</label>
+                      <textarea class="form-control" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                  </div>
+
+                  <button class="btn-full black">Envoyer le message</button>
+              </form>
+
+              <div class="questions">
+                  <h2 class="title-large">Besoin d’aide ?</h2>
+                  <p class="label">Questions fréquentes :</p>
+                  <ul>
+                      <li>
+                          <a href="">Quels sont les délais de livraison ?</a>
+                      </li>
+
+                      <li>
+                          <a href="">Comment suivre la livraison de ma commande ?</a>
+                      </li>
+
+                      <li>
+                          <a href="">Comment retourner ou échanger ?</a>
+                      </li>
+                  </ul>
+                  <a href="" class="btn">Voir toute la FAQ</a>
+              </div>
+
+              <div class="social-contact">
+                  <h2 class="title-large">Nous suivre</h2>
+                  <ul>
+                      <li>
+                          <a href=""><i class="icon-sm-facebook"></i> Facebook</a>
+                      </li>
+
+                      <li>
+                          <a href=""><i class="icon-pinterest"></i> Pinterest</a>
+                      </li>
+
+                      <li>
+                          <a href=""><i class="icon-sm-instagram"></i> Instagram</a>
+                      </li>
+                  </ul>
+              </div>
+              </div>
+          </div>
+
+            <div class="col-4 col-offset-1 col-right">
+                <div class="item-contact">
+                    <h2 class="title2">Boutique Paris</h2>
+                    <p>Téléphone : <a href="tel:+33(0)172607768">+33 (0)1 72 60 77 68</a></p>
+                    <p>Email : <a href="">contact@mademoisellechapeaux.com</a></p>
+
+                    <p class="address">15 rue des Tournelles – 75004 Paris <br>Métro : Bastille – Saint Paul
+                    </p>
+
+                    <a href="" class="btn">Voir l'itinéraire</a>
+                </div>
+
+                <div class="item-contact">
+                    <h2 class="title2">Boutique Lille</h2>
+                    <p>Téléphone : <a href="tel:+33(0)320334679">+33 (0)3 20 33 46 79</a></p>
+                    <p>Email : <a href="">lille@mademoisellechapeaux.com</a></p>
+
+                    <p class="address">12 rue Bartholomé Masurel - 59000 Lille</p>
+
+                    <a href="" class="btn">Voir l'itinéraire</a>
+                </div>
+
+                <div class="item-contact bottom">
+                    <p class="title-item-contact"><strong>Relation clients, commandes sur mesure </strong></p>
+                    <p><strong>Cécile Guenno</strong></p>
+                    <p>Téléphone : <a href="tel:+33(0)172607768">+33 (0)1 72 60 77 68</a></p>
+                    <p>Email : <a href="">contact@mademoisellechapeaux.com</a></p>
+                </div>
+
+                <div class="item-contact bottom">
+                    <p class="title-item-contact"><strong>Communication, relation presse et developpement commercial</strong></p>
+                    <p><strong>Chloé Thieblin</strong></p>
+                    <p>Téléphone : <a href="tel:+33(0)172607768">+33 (0)1 72 60 77 68</a></p>
+                    <p>Email : <a href="">chloe@mademoisellechapeaux.com</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    {% include '@blocks/services.twig' %}
+    {% include '@blocks/instagram.twig' %}
+{% endblock %}

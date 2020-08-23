@@ -1,0 +1,87 @@
+@import '../includes/variables';
+
+.block-login {
+    margin: 30px 0 50px;
+
+    @media screen and (min-width: $tablet-medium) {
+        margin: 30px 0 100px;
+    }
+
+    .wrapper {
+        max-width: 1040px;
+    }
+
+    .title2 {
+        text-align: center;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 64px;
+        }
+    }
+
+    .col-left {
+        @media screen and (min-width: $tablet-medium) {
+            padding-right: 100px;
+            border-right: 1px solid #e8e8e8;
+        }
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .title-col {
+        margin-bottom: 27px;
+        font-size: 30px;
+        color: #191919;
+        font-weight: 500;
+    }
+
+    .descriptions {
+        font-size: 20px;
+        line-height: 32px;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        &:first-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    .forgot-password {
+        text-align: right;
+        margin: -16px 0 30px;
+
+        a {
+            color: $steel;
+            font-size: 17px;
+            line-height: 22px;
+            border-bottom: 1px solid $steel;
+        }
+
+        input {
+            color: #7d7d87;
+            font-size: 17px;
+            border-bottom: 1px solid #7d7d87;
+        }
+    }
+
+    .note {
+        margin-top: 18px;
+        font-size: 16px;
+        line-height: 19px;
+        font-style: italic;
+    }
+
+    .col-right {
+        @media screen and (min-width: $tablet-medium) {
+            padding-left: 100px;
+        }
+
+        .descriptions {
+            margin-bottom: 40px;
+        }
+    }
+}

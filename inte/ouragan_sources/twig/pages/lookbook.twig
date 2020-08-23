@@ -1,0 +1,211 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} lookbook-html{% endblock %}
+{% block bodyclass %}{{ parent() }} lookbook-body{% endblock %}
+
+{% block title %}lookbook - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-lookbook">
+        <div class="wrapper">
+            <ul class="breadcrumbs">
+                <li class="active">
+                    <a href="">Page d’accueil</a>
+                </li>
+                <li>
+                    <a href="">Lookbook</a>
+                </li>
+            </ul>
+
+            <div class="top-journal">
+                <h1 class="title">Lookbook</h1>
+                <p class="descriptions">Et quoniam inedia gravi adflictabantur, locum petivere Paleas nomine,<br>vergentem
+                    in mare, valido muro firmatum, ubi conduntur</p>
+            </div>
+
+            <div class="group-filter-category">
+                <ul>
+                    <li class="active">
+                        <a href="">TOUT</a>
+                    </li>
+                    <li>
+                        <a href="">CATÉGORY 1</a>
+                    </li>
+                    <li>
+                        <a href="">CATÉGORY 2</a>
+                    </li>
+                    <li>
+                        <a href="">CATÉGORY 3</a>
+                    </li>
+                    <li>
+                        <a href="">CATÉGORY 4</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row list-product">
+                <div class="col-4 product">
+                    <div class="image">
+                        <a href="">
+                            <img src="assets/images/product.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="info-product">
+                        <p class="name-product">Collette</p>
+                    </div>
+                </div>
+
+                <div class="col-4 product">
+                    <div class="image">
+                        <a href="">
+                            <img src="assets/images/product.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="info-product">
+                        <p class="name-product">Collette</p>
+                    </div>
+                </div>
+
+                <div class="col-4 product">
+                    <div class="image">
+                        <a href="">
+                            <img src="assets/images/product.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="info-product">
+                        <p class="name-product">Collette</p>
+                    </div>
+                </div>
+
+                <div class="col-6 product">
+                    <div class="image">
+                        <a href="">
+                            <img src="assets/images/product.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="info-product">
+                        <p class="name-product">Collette</p>
+                    </div>
+                </div>
+
+                <div class="col-6 product">
+                    <div class="image">
+                        <a href="">
+                            <img src="assets/images/product.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="info-product">
+                        <p class="name-product">Collette</p>
+                    </div>
+                </div>
+
+                <div class="col-4 product">
+                    <div class="image">
+                        <a href="">
+                            <img src="assets/images/product.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="info-product">
+                        <p class="name-product">Collette</p>
+                    </div>
+                </div>
+
+                <div class="col-4 product">
+                    <div class="image">
+                        <a href="">
+                            <img src="assets/images/product.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="info-product">
+                        <p class="name-product">Collette</p>
+                    </div>
+                </div>
+
+                <div class="col-4 product">
+                    <div class="image">
+                        <a href="">
+                            <img src="assets/images/product.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="info-product">
+                        <p class="name-product">Collette</p>
+                    </div>
+                </div>
+
+                <div class="col-6 product">
+                    <div class="image">
+                        <a href="">
+                            <img src="assets/images/product.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="info-product">
+                        <p class="name-product">Collette</p>
+                    </div>
+                </div>
+
+                <div class="col-6 product">
+                    <div class="image">
+                        <a href="">
+                            <img src="assets/images/product.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="info-product">
+                        <p class="name-product">Collette</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result">
+                <p class="text">Vous avez vu 16 produits sur 24.</p>
+
+                <div class="process">
+                    <div class="progress-bar" style="width: 20%">
+                    </div>
+                </div>
+
+                <a href="" class="btn-border">CHARGER PLUS</a>
+            </div>
+
+        </div>
+    </div>
+    {% include '@blocks/instagram.twig' %}
+{% endblock %}

@@ -1,0 +1,110 @@
+@import '../includes/variables';
+
+.btn {
+    font-size: 18px;
+    color: #262524;
+    min-width: 150px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #262524;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    padding-right: 30px;
+
+
+    @media screen and (min-width: $tablet-medium) {
+        min-width: 195px;
+    }
+
+    &:before {
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: #262524;
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        transition: all .5s;
+    }
+
+    &:after {
+        content: '\e903';
+        font-family: 'icomoon' !important;
+        font-size: 11px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all .5s;
+    }
+
+    &:hover {
+        &:before {
+            width: 20px;
+            right: -20px;
+        }
+
+        &:after {
+            right: -20px;
+        }
+    }
+}
+
+.btn-border {
+    padding: 14px 20px 10px;
+    border: 1px solid #979797;
+    min-width: 236px;
+    text-align: center;
+    display: inline-block;
+    transition: all .3s;
+
+    @media screen and (max-width: $tablet-medium - 1) {
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: $dark-grey;
+        color: $white;
+    }
+}
+
+.btn-full {
+    width: 100%;
+    display: block;
+    padding: 15px 20px 11px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #979797;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+
+    &.black {
+        background-color: $dark-grey;
+        color: $white;
+
+        &:hover {
+            background-color: transparent;
+            color: $dark-grey;
+        }
+    }
+
+    &:hover {
+        background-color: $dark-grey;
+        color: $white;
+    }
+
+    .icon-share {
+        font-size: 21px;
+        padding-left: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.btn-underline {
+    color: $steel;
+    font-size: 17px;
+    border-bottom: 1px solid $steel;
+}

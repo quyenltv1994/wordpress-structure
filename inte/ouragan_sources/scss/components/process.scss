@@ -1,0 +1,19 @@
+@import '../includes/variables';
+
+.process {
+    height: 3px;
+    width: 100%;
+    max-width: 217px;
+    background-color: $white;
+    position: relative;
+    margin: 0 auto 14px;
+
+    @media screen and (min-width: $tablet-medium) {
+        margin: 0 auto 29px;
+    }
+
+    .progress-bar {
+        height: 3px;
+        background-color: $charcoal-grey;
+    }
+}

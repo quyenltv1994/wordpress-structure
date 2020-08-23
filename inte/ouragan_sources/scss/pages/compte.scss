@@ -1,0 +1,275 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+#content-myaccount {
+    max-width: 800px;
+}
+
+.block-comple {
+    margin: 30px 0;
+
+    .wrapper {
+        max-width: 1040px;
+    }
+
+    .title-box {
+        text-align: center;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 59px;
+        }
+
+        .sub-title {
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+
+    .tab-navigate {
+        margin-bottom: 45px;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 55px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            position: relative;
+
+            @media screen and (max-width: $tablet-medium - 1) {
+
+                &.active {
+                    ul {
+                        display: block;
+                    }
+                }
+
+                ul {
+                    position: absolute;
+                    top: calc(100% - 1px);
+                    left: 0;
+                    right: 0;
+                    border: 1px solid $light-peach;
+                    background-color: $white;
+                    z-index: 9;
+                    display: none;
+
+                    li {
+                        &:not(:first-child) {
+                            @media screen and (max-width: $tablet-medium - 1) {
+                                border-top: 1px solid $light-peach;
+                            }
+                        }
+                    }
+                }
+            }
+
+            li {
+                display: list-item;
+                font-size: 12px;
+                width: 100%;
+                font-weight: 500;
+
+                @media screen and (min-width: $tablet-medium) {
+                    width: 33.33%;
+                    padding-bottom: 20px;
+                    text-align: center;
+                    font-size: 20px;
+                    border-bottom: 1px solid #e8e8e8;
+                    color: #7d7d87;
+                }
+
+                @media screen and (max-width: $tablet-medium - 1) {
+                    text-transform: uppercase;
+                }
+
+                &.is-active {
+                    @media screen and (min-width: $tablet-medium) {
+                        color: #191919;
+                        border-bottom: 2px solid $dark-grey;
+                    }
+
+                    @media screen and (max-width: $tablet-medium - 1) {
+                        border: 1px solid $light-peach;
+                    }
+
+                    a:after {
+                        @media screen and (max-width: $tablet-medium - 1) {
+                            content: '\e902';
+                            font-family: 'icomoon' !important;
+                            font-size: 5px;
+                            position: absolute;
+                            right: 20px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+
+                a {
+                    @media screen and (max-width: $tablet-medium - 1) {
+                        padding: 18px 20px 14px;
+                        display: block;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+
+    .title-form {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #191919;
+    }
+
+    .forgot-password {
+        text-align: right;
+        margin: 12px 0 -7px;
+
+        a {
+            color: #7d7e85;
+            font-size: 17px;
+            line-height: 22px;
+            border-bottom: 1px solid #7d7e85;
+        }
+    }
+
+    .note {
+        font-size: 14px;
+        line-height: 19px;
+        color: #191919;
+        font-style: italic;
+    }
+
+    .title-small {
+        margin: 30px 0 20px;
+        font-size: 22px;
+        color: #191919;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin: 67px 0 20px;
+        }
+    }
+
+    .form-box {
+        margin-top: 30px;
+
+        .from-group-single {
+            @media screen and (min-width: $tablet-medium) {
+                width: calc(50% - 15px);
+            }
+        }
+
+        .form-date {
+            @media screen and (min-width: $tablet-medium) {
+                width: calc(50% - 15px);
+            }
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .btn-full.black {
+            width: 245px;
+            margin: 60px auto 0;
+        }
+
+        .check-verify {
+            margin-top: 30px;
+        }
+    }
+
+    .compte-table {
+        width: 100%;
+        margin-top: 30px;
+        border: 1px solid #e8e8e8;
+        overflow: hidden;
+
+        th, td {
+            font-size: 20px;
+            line-height: 22px;
+            padding: 22px 20px 18px;
+            vertical-align: top;
+            font-weight: 400;
+
+            span, strong {
+                font-weight: 500;
+            }
+
+            a {
+                font-weight: 500;
+                border-bottom: 1px solid $dark-grey;
+            }
+        }
+
+        th {
+            position: relative;
+            border-bottom: 1px solid #e8e8e8;
+
+            &:not(:last-child):after {
+                content: '';
+                height: 1000px;
+                width: 1px;
+                background-color: #e8e8e8;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+
+
+    .addresses {
+        margin-top: 30px;
+
+        .woocommerce-Address {
+            border: 1px solid #e8e8e8;
+            margin-bottom: 20px;
+
+            .title {
+                display: flex;
+                justify-content: space-between;
+                font-size: 20px;
+                padding: 22px 20px 18px;
+                border-bottom: 1px solid #e8e8e8;
+
+                .edit {
+                    font-weight: 500;
+                    border-bottom: 1px solid $dark-grey;
+                }
+            }
+
+            address {
+                padding: 22px 20px 18px;
+                font-size: 20px;
+                line-height: 26px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .woocommerce-address-fields {
+        margin-top: 30px;
+
+        .button {
+            width: 250px;
+            margin: 50px auto 0;
+            display: block;
+            padding: 15px 20px 11px;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            background-color: $dark-grey;
+            color: $white;
+        }
+    }
+}

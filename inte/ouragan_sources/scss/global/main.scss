@@ -1,0 +1,44 @@
+@import '../includes/variables';
+@import '../includes/normalize';
+@import '../includes/fonts';
+
+//slick.scss
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../../node_modules/select2/dist/css/select2.min.css';
+@import '../../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css';
+
+//magnific-popup.css
+//@import '../../node_modules/magnific-popup/dist/magnific-popup';
+
+@import 'main_includes/**/*.scss';
+@import '../blocks/**/*.scss';
+@import '../components/**/*.scss';
+@import '../layouts/**/*.scss';
+@import '../pages/**/*.scss';
+
+html {
+  visibility: visible;
+  opacity: 1;
+}
+
+///!\ REMINDER /!\
+//
+// Use consistent media queries in the entire project.
+//
+// @media screen and (min-width: $desktop-medium) {}
+// @media screen and (max-width: $desktop-medium) {}
+//
+// If width = $desktop-medium, both rules will apply and this is not good.
+//
+// Instead, do it this way:
+//
+//   @media screen and (min-width: $desktop-medium + 1) {}
+//   @media screen and (max-width: $desktop-medium) {}
+//
+//.. or this way:
+//
+//   @media screen and (min-width: $desktop-medium) {}
+//   @media screen and (max-width: $desktop-medium - 1) {}
+//
+// if you use media queries like that, you'll have to adapt variables.
+// We do not recommend this because it may become confusing when working on many projects.

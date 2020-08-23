@@ -1,0 +1,281 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+.block-la-marque {
+    opacity: 0;
+    padding: 20px 0;
+
+    @media screen and (min-width: $desktop-small) {
+        padding: 120px 0 80px;
+    }
+
+    @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+        padding: 50px 0;
+    }
+
+    &:first-child {
+        padding: 128px 0 30px;
+
+        @media screen and (min-width: $tablet-medium) {
+            padding: 163px 0 80px;
+        }
+    }
+
+    &.two {
+        .title-large {
+            color: $light-sky-blue;
+        }
+
+        .video {
+            max-width: 1100px;
+
+            @media screen and (min-width: $desktop-small) {
+                margin: 0 auto 111px;
+            }
+
+            @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+                margin: 0 auto 50px;
+            }
+        }
+
+        .title2 {
+            margin-bottom: 30px;
+            max-width: 824px;
+
+            @media screen and (min-width: $tablet-medium) {
+                margin-bottom: 60px;
+                margin-left: 107px;
+            }
+        }
+
+        .list-item {
+            .item {
+                &:nth-child(even) {
+                    flex-direction: row-reverse;
+                }
+
+                &:nth-child(odd) {
+                    .image {
+                        @media screen and (min-width: $desktop-small) {
+                            padding: 0 110px 0 15px;
+                        }
+
+                        @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+                            padding: 0 50px 0 15px;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    align-items: start;
+                }
+
+                &.full {
+                    @media screen and (min-width: $tablet-medium) {
+                        margin: -80px 0 50px;
+                    }
+
+                    .descriptions {
+                        @media screen and (min-width: $tablet-medium) {
+                            padding: 50px 20px 20px;
+                        }
+
+                        @media screen and (min-width: $desktop-medium) {
+                            padding: 150px calc((100% - 1250px) / 2 + 110px) 20px 110px;
+                        }
+                    }
+                }
+
+                &.full-wrapper {
+                    .image {
+                        @media screen and (min-width: $tablet-medium) {
+                            padding: 0 0 0 15px;
+                        }
+                    }
+
+                    .descriptions {
+                        @media screen and (min-width: $desktop-small) {
+                            padding: 20px 120px 20px 76px;
+                        }
+
+                        @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+                            padding: 20px 40px;
+                        }
+                    }
+                }
+
+                .title2 {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &.three {
+        .title-large {
+            color: #dfd5e1;
+        }
+
+        .video {
+            @media screen and (min-width: $desktop-small) {
+                margin-bottom: 105px;
+            }
+        }
+
+
+        .list-item {
+            .item {
+                &:nth-child(odd) {
+                    flex-direction: row-reverse;
+                    margin-bottom: 25px;
+
+                    .image {
+                        @media screen and (min-width: $desktop-small) {
+                            padding-left: 110px;
+                        }
+                    }
+                }
+
+                &:nth-child(even) {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+    .title-large {
+        text-align: center;
+        margin-bottom: 30px;
+        color: $pale;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 65px;
+        }
+    }
+
+    .video {
+        position: relative;
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        @media screen and (min-width: $desktop-small) {
+            margin-bottom: 80px;
+        }
+    }
+
+    .btn-full.black {
+        max-width: 200px;
+        margin: 40px auto 0;
+    }
+
+    .list-item {
+        .item {
+            overflow: hidden;
+            padding: 0 20px;
+
+            @media screen and (min-width: $tablet-medium) {
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+            }
+
+            &:not(.full) {
+                max-width: 1250px;
+                margin: 0 auto;
+            }
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+
+                .image {
+                    @media screen and (min-width: $desktop-small) {
+                        padding-left: 110px;
+                    }
+                }
+            }
+
+            &.full {
+                .descriptions {
+                    @media screen and (min-width: $tablet-medium) {
+                        padding: 20px 95px 20px 35px;
+                    }
+
+                    @media screen and (min-width: $desktop-medium) {
+                        padding: 20px 95px 20px calc((100% - 1250px) / 2 + 110px);
+                    }
+                }
+
+                .image {
+                    max-width: 100%;
+                    padding: 0;
+                }
+            }
+
+            .image {
+                overflow: hidden;
+                position: relative;
+
+                @media screen and (max-width: $tablet-medium - 1) {
+                    margin-bottom: 20px;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .descriptions {
+                @media screen and (min-width: $desktop-small) {
+                    padding: 20px 135px;
+                }
+
+                @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+                    padding: 20px 50px;
+                }
+
+                @media screen and (max-width: $tablet-medium - 1) {
+                    margin-bottom: 30px;
+                }
+
+                .title2 {
+                    position: relative;
+
+                    + .des {
+                        margin-top: 30px;
+
+                        @media screen and (min-width: $tablet-medium) {
+                            margin-top: 87px;
+                        }
+                    }
+
+                    .logo-la-marque {
+                        position: absolute;
+                        right: -50px;
+                        bottom: -60px;
+                        width: 150px;
+                    }
+                }
+
+                .des:not(:last-child) {
+                    margin-bottom: 30px;
+
+                    @media screen and (min-width: $tablet-medium) {
+                        margin-bottom: 50px;
+                    }
+                }
+
+                p:not(.title2) {
+                    font-size: 22px;
+                    line-height: 35px;
+
+                    strong {
+                        font-weight: 500;
+                        font-size: 25px;
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

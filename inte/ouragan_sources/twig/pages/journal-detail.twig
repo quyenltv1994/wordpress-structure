@@ -1,0 +1,217 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} journal-detail-html{% endblock %}
+{% block bodyclass %}{{ parent() }} journal-detail-body{% endblock %}
+
+{% block title %}journal-detail - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-journal-detail">
+        <div class="wrapper">
+            <ul class="breadcrumbs">
+                <li class="active">
+                    <a href="">Page d’accueil</a>
+                </li>
+
+                <li>
+                    <a href="">Journal</a>
+                </li>
+
+                <li>
+                    <a href="">article</a>
+                </li>
+            </ul>
+
+            <div class="top-journal-detail">
+                <p class="category">Categories</p>
+                <h1 class="title2">Carte cadeau : 8 belles raisons d’offrir un chapeau !</h1>
+                <p class="author"><strong>Auteur :</strong> Marion Melinois</p>
+                <div class="image">
+                    <img src="assets/images/JSTEY-NE-PAS-DIFFUSER-3750.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="detail">
+                <h2>Omnes putas utrumque audivi cotidieque mihi mihi audivi autem frequenter sane quid ea quos
+                    sane.</h2>
+                <p>Nisi mihi Phaedrum, inquam, tu mentitum aut Zenonem putas, quorum utrumque audivi, cum mihi nihil
+                    sane praeter sedulitatem probarent, omnes mihi Epicuri sententiae satis notae sunt. atque eos, quos
+                    nominavi, cum Attico nostro frequenter audivi, cum miraretur ille quidem utrumque, Phaedrum autem
+                    etiam amaret, cotidieque inter nos ea, quae audiebamus, conferebamus, neque erat umquam
+                    controversia, quid ego intellegerem, sed quid probarem.
+                </p>
+                <p>Per hoc minui studium suum existimans Paulus, ut erat in conplicandis negotiis artifex dirus, unde ei
+                    Catenae inditum est cognomentum, vicarium ipsum eos quibus praeerat adhuc defensantem ad sortem
+                    periculorum communium traxit. et instabat ut eum quoque cum tribunis et aliis pluribus ad comitatum
+                    imperatoris vinctum perduceret: quo percitus ille exitio urgente</p>
+
+                <p><strong>Imperatoris vinctum perduceret :</strong></p>
+                <ul>
+                    <li>
+                        - Ad abiecerunt raptavere corpora ampla.
+                    </li>
+
+                    <li>
+                        - Concitatae minus prudens doctrinarum delatae.
+                    </li>
+
+                    <li>
+                        - Deliciis omnium audiendi erunt nec.
+                    </li>
+
+                    <li>
+                        - Suscepisset debeo et debeo tuus.
+                    </li>
+
+                    <li>
+                        - Aliquanto istam robustioribus tuum meae.
+                    </li>
+                </ul>
+                <h2>Acti per cum multiplices multiplices</h2>
+                <p>Eodem tempore Serenianus ex duce, cuius ignavia populatam in Phoenice Celsen ante rettulimus,
+                    pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi,
+                    aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad
+                    templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et
+                    cunctum.</p>
+                <img src="assets/images/JSTEY-NE-PAS-DIFFUSER-3750.jpg" alt="">
+
+                <p><small>Légende de la photo - 0068362529</small></p>
+
+                <p><strong>Imperatoris vinctum perduceret :</strong></p>
+                <ul>
+                    <li>
+                        Aliquanto istam robustioribus tuum meae.
+                    </li>
+
+                    <li>
+                        Non mentiri nummatum tumentemque bene visus
+                    </li>
+
+                    <li>
+                        Decorata monti hanc quibus plena.
+                    </li>
+
+                    <li>
+                        Constantia ei orientis unum perissent.
+                    </li>
+
+                    <li>
+                        Altera committat et omnium itidem.
+                    </li>
+                </ul>
+
+                <h2>Acti per cum multiplices multiplices</h2>
+
+                <div class="wrap-text-image">
+                    <div class="spacer"></div>
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                        <p><small>Légende de la photo - 0068362529</small></p>
+                    </div>
+                    <p>Eodem tempore Serenianus ex duce, cuius ignavia populatam in Phoenice Celsen ante rettulimus,
+                        pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione
+                        absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis
+                        artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium,
+                        ut cupiebat, et cunctum.
+                        Qui cum venisset ob haec festinatis itineribus
+                        Antiochiam, praestrictis palatii ianuis, contempto
+                        Caesare, quem videri decuerat, ad praetorium
+                        cum pompa sollemni perrexit morbosque diu
+                        causatus nec regiam introiit nec processit in
+                        publicum, sed abditus multa in eius moliebatur
+                        exitium addens quaedam relationibus
+                        supervacua, quas subinde dimittebat ad
+                        principem. Incenderat autem audaces usque ad
+                        insaniam homines ad haec, quae nefariis egere
+                        conatibus, Luscus quidam curator urbis subito
+                        visus: eosque ut heiulans baiolorum praecentor
+                        ad expediendum quod orsi sunt incitans vocibus
+                        crebris. qui haut longe postea ideo vivus exustus
+                        est. Vita est illis semper in fuga uxoresque
+                        mercenariae conductae ad tempus ex pacto
+                        atque, ut sit species matrimonii, dotis nomine
+                        futura coniunx hastam et tabernaculum offert.</p>
+                </div>
+
+                <div class="block-blockquote">
+                <blockquote>
+                    Hinc ille commotus ut iniusta perferens et indigna praefecti custodiam protectoribus mandaverat
+                    fidis. quo conperto Montius tunc quaestor acer quidem sed ad lenitatem propensior, consulens in
+                    commune advocatos.
+                </blockquote>
+                    <p class="author">Mathieu MInelli</p>
+                </div>
+
+                <h2>Acti per cum multiplices multiplices</h2>
+                <h3>Supervacua Caesare moliebatur ianuis festinatis itineribus principem addens
+                    nec dimittebat in decuerat sed regiam nec Antiochiam</h3>
+                <p><strong>Imperatoris vinctum perduceret</strong></p>
+                <p>Per hoc minui studium suum existimans Paulus, ut erat in conplicandis negotiis artifex dirus, unde ei
+                    Catenae inditum est cognomentum, vicarium ipsum eos quibus praeerat adhuc defensantem ad sortem
+                    periculorum communium traxit. et instabat ut eum quoque cum tribunis et aliis pluribus ad comitatum
+                    imperatoris vinctum perduceret: quo percitus ille exitio urgente abrupto ferro eundem adoritur
+                    Paulum. et quia languente dextera, letaliter ferire non potuit, iam districtum mucronem in proprium
+                    latus inpegit. hocque deformi genere mortis excessit e vita iustissimus rector ausus miserabiles
+                    casus levare multorum.</p>
+                <a href="" class="btn-full black">EXEMPLE CTA</a>
+                <p><strong>Imperatoris vinctum perduceret</strong></p>
+                <p>Eodem tempore Serenianus ex duce, cuius ignavia populatam in Phoenice Celsen ante rettulimus,
+                    pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi,
+                    aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad
+                    templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et
+                    cunctum.</p>
+
+                <div class="partager-journal">
+                    <p>Partager</p>
+
+                    <ul class="social">
+                        <li>
+                            <a href="" target="_blank"><i class="icon-sm-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><i class="icon-pinterest"></i></a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><i class="icon-sm-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="group-btn">
+                    <a href="" class="btn prev">Article précédent</a>
+                    <a href="" class="btn next">Article suivant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include '@blocks/list-journal.twig' %}
+    {% include '@blocks/instagram.twig' %}
+{% endblock %}

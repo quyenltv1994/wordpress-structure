@@ -1,0 +1,47 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} page-home-html{% endblock %}
+{% block bodyclass %}{{ parent() }} home change-bg-color animation-page page-home{% endblock %}
+
+{% block title %}Home - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+        {{ ouragan_include_once_js('public/assets/js/nodeCursor.js', 1) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "http://my-website-url.com/#website",
+          "url": "http://my-website-url.com/",
+          "name": "Name of the website",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://my-website-url.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    {% include '@blocks/banner.twig' %}
+    {% include '@blocks/les-collections.twig' %}
+    {% include '@blocks/savoir-faire.twig' %}
+    {% include '@blocks/services.twig' with {"services_classes": "has-border-bottom", "services_data_color" : "data-color='#fff'"}%}
+    {% include '@blocks/news.twig' %}
+    {% include '@blocks/melanger-la-traditio.twig' %}
+    {% include '@blocks/instagram.twig' %}
+
+{% endblock %}

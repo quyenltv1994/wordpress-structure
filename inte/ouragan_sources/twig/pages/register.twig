@@ -1,0 +1,135 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} register-html{% endblock %}
+{% block bodyclass %}{{ parent() }} register-body{% endblock %}
+
+{% block title %}register - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-register">
+        <div class="wrapper">
+            <a href="" class="retour">&lt; Retour</a>
+            <h2 class="title2">Inscription à Mademoiselle Chapeaux </h2>
+
+            <div class="descriptions">
+                <p>
+                    La création d’un compte présente de nombreux avantages: vérifier plus rapidement, conserver
+                    plusieurs adresses, suivre les commandes, etc.
+                </p>
+            </div>
+
+            <form action="#" data-parsley-validate="">
+                <div class="form-group">
+                    <label>Prénom*</label>
+                    <input type="text" class="form-control" required="">
+                    <span class="label-error">Prénom invalide</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Nom*</label>
+                    <input type="text" class="form-control" required="">
+                    <span class="label-error">Nom invalide</span>
+                </div>
+
+                <div class="form-group form-date">
+                    <label>Date de naissance</label>
+
+                    <div class="group-select">
+                        <select class="form-select2 date" data-placeholder=" ">
+                            <option></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+
+                        <select class="form-select2 date" data-placeholder=" ">
+                            <option></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+
+                        <select class="form-select2 date" data-placeholder=" ">
+                            <option></option>
+                            <option value="1">1998</option>
+                            <option value="2">1999</option>
+                            <option value="3">2000</option>
+                            <option value="4">2001</option>
+                            <option value="5">2002</option>
+                            <option value="6">2003</option>
+                            <option value="7">2004</option>
+                            <option value="8" selected>2005</option>
+                            <option value="9">2006</option>
+                            <option value="10">2007</option>
+                            <option value="11">2008</option>
+                            <option value="12">2009</option>
+                            <option value="13">2010</option>
+                            <option value="14">2011</option>
+                            <option value="15">2012</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email*</label>
+                    <input type="email" class="form-control" required="">
+                    <span class="label-error">Adresse email invalide</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Mot de passe*</label>
+                    <input minlength="6" data-parsley-minlength="6" id="password1" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Confirmation mot de passe*</label>
+                    <input minlength="6" data-parsley-minlength="6" data-parsley-equalto="#password1" type="password"
+                           class="form-control">
+                </div>
+
+                <ul class="checkbox-group">
+                    <li>
+                        <input type="checkbox" name="checkbox1" value="" required="">
+                        <label>S’inscrire à la newsletter</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="">
+                        <label>Recevez les offres spéciales de nos partenaire</label>
+                    </li>
+                </ul>
+
+                <button class="btn-full black">S'inscrire</button>
+                <p class="note">*champs obligatoires</p>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,71 @@
+@import '../includes/variables';
+
+.slick-dots {
+    display: flex;
+    justify-content: start;
+    margin-top: 70px;
+    width: 100%;
+
+    li {
+        font-size: 0;
+        height: 6px;
+        width: 6px;
+        background-color: $white;
+        border-radius: 50%;
+        cursor: pointer;
+
+        + li {
+            margin-left: 8px;
+        }
+
+        &.slick-active {
+            background-color: $pink;
+            border: 1px solid $white;
+        }
+    }
+}
+
+.group-icon-slider {
+    position: absolute;
+    top: 110px;
+    //transform: translateY(-50%);
+
+    @media screen and (min-width: $tablet-medium) {
+        top: 50%;
+    }
+}
+
+.icon-slider {
+    height: 58px;
+    width: 58px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    position: absolute;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+    transition: all .4s;
+
+    &:hover {
+        @media screen and (min-width: $desktop-small) {
+            background-color: $pale-brown;
+            border: 1px solid $pale-brown;
+            color: $white;
+            background-clip: initial;
+        }
+    }
+
+    &.slick-disabled {
+        display: none !important;
+    }
+
+    &.icon-slider-right {
+        right: 50px;
+    }
+
+    &.icon-slider-left {
+        left: 50px;
+    }
+}

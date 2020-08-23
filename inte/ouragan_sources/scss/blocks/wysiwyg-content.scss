@@ -1,0 +1,99 @@
+@import '../includes/variables';
+
+.wysiwyg-content_block {
+  color: $textcolor-1;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  hr,
+  video,
+  iframe,
+  table,
+  blockquote {
+    display: block;
+    max-width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  video {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 656px;
+    @media screen and (max-width: $tablet-medium) {
+      height: 552px;
+    }
+    @media screen and (max-width: $tablet-small) {
+      height: 447px;
+    }
+  }
+  blockquote {
+    padding: 15px;
+    background: #F7F6F5;
+  }
+  ul,
+  ol {
+    list-style-position: inside;
+    color: $textcolor-1;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: upper-roman;
+  }
+  a {
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: $facebook-color;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  h4 {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  h6 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+  p,
+  table {
+    line-height: 21px;
+  }
+  hr {
+    border-top: solid 1px #eee;
+  }
+}

@@ -1,0 +1,171 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} aide-html{% endblock %}
+{% block bodyclass %}{{ parent() }} aide-body{% endblock %}
+
+{% block title %}aide - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-aide">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-8 col-left">
+                    <div class="info">
+                        <h2 class="title-large">Besoin d’aide ?</h2>
+
+                        <div class="list-item collapse">
+                            <div class="item">
+                                <p class="title-item">Quels sont les délais de livraison ?</p>
+                                <div class="des">
+                                    <p>Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum
+                                        dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel
+                                        serium agi Romae permittunt. ergo redeundum ad textum.</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <p class="title-item">Comment suivre la livraison de ma commande ?</p>
+                                <div class="des">
+                                    <p>Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum
+                                        dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel
+                                        serium agi Romae permittunt. ergo redeundum ad textum.</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <p class="title-item">Comment retourner ou échanger ?</p>
+                                <div class="des">
+                                    <p>Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum
+                                        dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel
+                                        serium agi Romae permittunt. ergo redeundum ad textum.</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <p class="title-item">Quels sont les délais de livraison ?</p>
+                                <div class="des">
+                                    <p>Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum
+                                        dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel
+                                        serium agi Romae permittunt. ergo redeundum ad textum.</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <p class="title-item">Comment suivre la livraison de ma commande ?</p>
+                                <div class="des">
+                                    <p>Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum
+                                        dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel
+                                        serium agi Romae permittunt. ergo redeundum ad textum.</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <p class="title-item">Quels sont les délais de livraison ?</p>
+                                <div class="des">
+                                    <p>Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum
+                                        dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel
+                                        serium agi Romae permittunt. ergo redeundum ad textum.</p>
+                                </div>
+                            </div>
+
+                            <div class="item"  id="1">
+                                <p class="title-item">Comment retourner ou échanger ?</p>
+                                <div class="des">
+                                    <p>Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum
+                                        dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel
+                                        serium agi Romae permittunt. ergo redeundum ad textum.</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <p class="title-item">Quels sont les délais de livraison ?</p>
+                                <div class="des">
+                                    <p>Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum
+                                        dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel
+                                        serium agi Romae permittunt. ergo redeundum ad textum.</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <p class="title-item">Comment suivre la livraison de ma commande ?</p>
+                                <div class="des">
+                                    <p>Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum
+                                        dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel
+                                        serium agi Romae permittunt. ergo redeundum ad textum.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="title-large">Une autre question ?</h2>
+
+                        <a href="" class="btn-full black">Nous contacter </a>
+                    </div>
+                </div>
+
+                <div class="col-4 col-right">
+                    <div class="list-item-contact">
+                        <div class="item-contact">
+                            <h2 class="title2">Boutique Paris</h2>
+                            <p>Téléphone : <a href="">+33(0)172607768</a></p>
+                            <p>Email : <a href="">contact@mademoisellechapeaux.com</a></p>
+                        </div>
+
+                        <div class="item-contact">
+                            <h2 class="title2">Boutique Lille</h2>
+                            <p>Téléphone : <a href="">+33(0)320334679</a></p>
+                            <p>Email : <a href="">lille@mademoisellechapeaux.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="social-contact">
+                        <h2 class="title-large">Nous suivre</h2>
+                        <ul>
+                            <li>
+                                <a href=""><i class="icon-sm-facebook"></i> Facebook</a>
+                            </li>
+
+                            <li>
+                                <a href=""><i class="icon-pinterest"></i> Pinterest</a>
+                            </li>
+
+                            <li>
+                                <a href=""><i class="icon-sm-instagram"></i> Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include '@blocks/services.twig' %}
+{% endblock %}

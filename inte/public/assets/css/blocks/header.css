@@ -1,0 +1,53 @@
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+/*
+
+  //Returns true if ouragan is in --dev mode
+
+  @if is_dev_mode() {
+    * {
+      background: red !important;
+    }
+  }
+
+*/
+#header {
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform 0.85s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: -webkit-transform 0.85s cubic-bezier(0.475, 0.425, 0, 0.995);
+  -o-transition: transform 0.85s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: transform 0.85s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: transform 0.85s cubic-bezier(0.475, 0.425, 0, 0.995), -webkit-transform 0.85s cubic-bezier(0.475, 0.425, 0, 0.995);
+}
+
+#header.pin {
+  -webkit-transform: translate3d(0, -110px, 0);
+  transform: translate3d(0, -110px, 0);
+}
+
+#header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#header .wrapper .menu li {
+  color: #fff;
+  display: inline-block;
+  margin-left: 40px;
+  font-size: 17px;
+  line-height: 22px;
+}
+/*# sourceMappingURL=header.css.map */

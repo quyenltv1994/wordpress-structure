@@ -1,0 +1,125 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} tunnel-confirmation-html{% endblock %}
+{% block bodyclass %}{{ parent() }} tunnel-confirmation-body{% endblock %}
+
+{% block title %}tunnel-confirmation - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-tunnel-confirmation">
+        <div class="wrapper">
+            <h2 class="title2">Merci pour votre commande !</h2>
+
+            <div class="descriptions">
+                <p>Nous avaons le plaisir de confirmer votre commande, elle est en route!
+                    <br>Un grand merci pour la confiance que vous nous accordez.</p>
+            </div>
+
+            <a href="" class="btn">Retour à la page d'accueil</a>
+
+            <div class="row">
+                <div class="col-8 col-left">
+                    <table class="cart-table">
+                        <thead>
+                        <tr>
+                            <th class="product-info">Produit</th>
+                            <th>Prix</th>
+                            <th>Quantité</th>
+                            <th>Sous-total TTC</th>
+                            <th>dont TVA</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr class="cart_item">
+                            <td class="product-info">
+                                <div class="image">
+                                    <img src="assets/images/product5.jpg" alt="">
+                                </div>
+
+                                <div class="info">
+                                    <p class="name-product">Simone</p>
+                                    <p class="des">Taille unique</p>
+                                    <p class="color">Couleur : <strong>Rose sorbet</strong></p>
+                                    <p class="icon-cross"></p>
+                                </div>
+                            </td>
+
+                            <td class="product-prix">295 €</td>
+
+                            <td class="product-quantity quantity">
+                                1
+                            </td>
+                            <td class="product-sous-total"><strong>295 €</strong></td>
+                            <td class="product-tva"><strong>10 €</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-4 col-right">
+                    <div class="wrap-cart-totals">
+                        <div class="cart-totals">
+                            <div class="item-price item">
+                                <p>Sous total TTC</p>
+                                <strong>295 €</strong>
+                            </div>
+
+                            <div class="item-price item">
+                                <p>dont TVA</p>
+                                <strong>10 €</strong>
+                            </div>
+
+                            <div class="item-livraison">
+                                <div class="wrap-livraison">
+                                    <p>Livraison :</p>
+                                    <strong>35 €</strong>
+                                </div>
+                            </div>
+
+                            <div class="item-promotion item">
+                                    <p>Promotion :</p>
+                                    <strong>-10 €</strong>
+                            </div>
+
+                            <div class="item-total item">
+                                <p>TOTAL TTC</p>
+                                <strong>310,65 €</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

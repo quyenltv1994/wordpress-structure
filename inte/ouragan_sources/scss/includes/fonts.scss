@@ -1,0 +1,270 @@
+//sass-lint:disable no-duplicate-properties
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-Light.eot');
+    src: url('../fonts/Calibre-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-Light.woff2') format('woff2'),
+    url('../fonts/Calibre-Light.woff') format('woff'),
+    url('../fonts/Calibre-Light.ttf') format('truetype'),
+    url('../fonts/Calibre-Light.svg#../fonts/Calibre-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-Thin.eot');
+    src: url('../fonts/Calibre-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-Thin.woff2') format('woff2'),
+    url('../fonts/Calibre-Thin.woff') format('woff'),
+    url('../fonts/Calibre-Thin.ttf') format('truetype'),
+    url('../fonts/Calibre-Thin.svg#../fonts/Calibre-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-BoldItalic.eot');
+    src: url('../fonts/Calibre-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-BoldItalic.woff2') format('woff2'),
+    url('../fonts/Calibre-BoldItalic.woff') format('woff'),
+    url('../fonts/Calibre-BoldItalic.ttf') format('truetype'),
+    url('../fonts/Calibre-BoldItalic.svg#../fonts/Calibre-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-ThinItalic.eot');
+    src: url('../fonts/Calibre-ThinItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-ThinItalic.woff2') format('woff2'),
+    url('../fonts/Calibre-ThinItalic.woff') format('woff'),
+    url('../fonts/Calibre-ThinItalic.ttf') format('truetype'),
+    url('../fonts/Calibre-ThinItalic.svg#../fonts/Calibre-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-Medium.eot');
+    src: url('../fonts/Calibre-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-Medium.woff2') format('woff2'),
+    url('../fonts/Calibre-Medium.woff') format('woff'),
+    url('../fonts/Calibre-Medium.ttf') format('truetype'),
+    url('../fonts/Calibre-Medium.svg#../fonts/Calibre-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-SemiboldItalic.eot');
+    src: url('../fonts/Calibre-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-SemiboldItalic.woff2') format('woff2'),
+    url('../fonts/Calibre-SemiboldItalic.woff') format('woff'),
+    url('../fonts/Calibre-SemiboldItalic.ttf') format('truetype'),
+    url('../fonts/Calibre-SemiboldItalic.svg#../fonts/Calibre-SemiboldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-LightItalic.eot');
+    src: url('../fonts/Calibre-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-LightItalic.woff2') format('woff2'),
+    url('../fonts/Calibre-LightItalic.woff') format('woff'),
+    url('../fonts/Calibre-LightItalic.ttf') format('truetype'),
+    url('../fonts/Calibre-LightItalic.svg#../fonts/Calibre-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-Semibold.eot');
+    src: url('../fonts/Calibre-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-Semibold.woff2') format('woff2'),
+    url('../fonts/Calibre-Semibold.woff') format('woff'),
+    url('../fonts/Calibre-Semibold.ttf') format('truetype'),
+    url('../fonts/Calibre-Semibold.svg#../fonts/Calibre-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-Bold.eot');
+    src: url('../fonts/Calibre-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-Bold.woff2') format('woff2'),
+    url('../fonts/Calibre-Bold.woff') format('woff'),
+    url('../fonts/Calibre-Bold.ttf') format('truetype'),
+    url('../fonts/Calibre-Bold.svg#../fonts/Calibre-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-RegularItalic.eot');
+    src: url('../fonts/Calibre-RegularItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-RegularItalic.woff2') format('woff2'),
+    url('../fonts/Calibre-RegularItalic.woff') format('woff'),
+    url('../fonts/Calibre-RegularItalic.ttf') format('truetype'),
+    url('../fonts/Calibre-RegularItalic.svg#../fonts/Calibre-RegularItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-Regular.eot');
+    src: url('../fonts/Calibre-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-Regular.woff2') format('woff2'),
+    url('../fonts/Calibre-Regular.woff') format('woff'),
+    url('../fonts/Calibre-Regular.ttf') format('truetype'),
+    url('../fonts/Calibre-Regular.svg#../fonts/Calibre-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-Black.eot');
+    src: url('../fonts/Calibre-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-Black.woff2') format('woff2'),
+    url('../fonts/Calibre-Black.woff') format('woff'),
+    url('../fonts/Calibre-Black.ttf') format('truetype'),
+    url('../fonts/Calibre-Black.svg#../fonts/Calibre-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-MediumItalic.eot');
+    src: url('../fonts/Calibre-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-MediumItalic.woff2') format('woff2'),
+    url('../fonts/Calibre-MediumItalic.woff') format('woff'),
+    url('../fonts/Calibre-MediumItalic.ttf') format('truetype'),
+    url('../fonts/Calibre-MediumItalic.svg#../fonts/Calibre-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('../fonts/Calibre-BlackItalic.eot');
+    src: url('../fonts/Calibre-BlackItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Calibre-BlackItalic.woff2') format('woff2'),
+    url('../fonts/Calibre-BlackItalic.woff') format('woff'),
+    url('../fonts/Calibre-BlackItalic.ttf') format('truetype'),
+    url('../fonts/Calibre-BlackItalic.svg#../fonts/Calibre-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+
+@font-face {
+    font-family: 'SchnyderS-Demi';
+    src: url('../fonts/SchnyderS-Demi2.eot');
+    src: url('../fonts/SchnyderS-Demi2.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SchnyderS-Demi2.woff2') format('woff2'),
+    url('../fonts/SchnyderS-Demi2.woff') format('woff'),
+    url('../fonts/SchnyderS-Demi2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SchnyderS-Demi';
+    src: url('../fonts/SchnyderS-Demi.eot');
+    src: url('../fonts/SchnyderS-Demi.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SchnyderS-Demi.woff2') format('woff2'),
+    url('../fonts/SchnyderS-Demi.woff') format('woff'),
+    url('../fonts/SchnyderS-Demi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?r9dujx');
+    src:  url('../fonts/icomoon.eot?r9dujx#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?r9dujx') format('truetype'),
+    url('../fonts/icomoon.woff?r9dujx') format('woff'),
+    url('../fonts/icomoon.svg?r9dujx#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^='icon-'], [class*=' icon-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail:before {
+    content: '\e90e';
+}
+.icon-cross:before {
+    content: '\e90d';
+    color: #7d7e85;
+}
+.icon-share:before {
+    content: '\e90c';
+}
+.icon-play:before {
+    content: '\e90b';
+    color: #be8d6c;
+}
+.icon-slider-left:before {
+    content: '\e900';
+}
+.icon-comment:before {
+    content: '\e901';
+    color: #fff;
+}
+.icon-arrow:before {
+    content: '\e902';
+}
+.icon-arrow-right:before {
+    content: '\e903';
+}
+.icon-boutique:before {
+    content: '\e904';
+}
+.icon-pinterest:before {
+    content: '\e905';
+}
+.icon-search:before {
+    content: '\e906';
+}
+.icon-slider-right:before {
+    content: '\e907';
+}
+.icon-down:before {
+    content: '\e908';
+    color: #fff;
+}
+.icon-sm-facebook:before {
+    content: '\e909';
+}
+.icon-sm-instagram:before {
+    content: '\e90a';
+}

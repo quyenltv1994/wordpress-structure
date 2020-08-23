@@ -1,0 +1,175 @@
+@import '../includes/variables';
+
+.block-news {
+    padding: 50px 0;
+
+    @media screen and (min-width: $desktop-small) {
+        padding: 100px 0 130px;
+    }
+
+    .wrapper {
+        max-width: 1080px;
+    }
+
+    .title {
+        color: $pale;
+        line-height: 52px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .title2 {
+        color: #181918;
+        letter-spacing: 1.14px;
+        text-align: center;
+
+        @media screen and (min-width: $tablet-medium) {
+            letter-spacing: 0.68px;
+        }
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            font-size: 20px;
+            line-height: 31px;
+        }
+    }
+
+    .content-news {
+        @media screen and (min-width: $tablet-medium) {
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+        }
+
+        .wrap-list-product {
+            height: 100%;
+            position: relative;
+            max-width: 220px;
+            width: 100%;
+            z-index: 9;
+            margin: 0 auto;
+            top: 40px;
+
+            @media screen and (min-width: $tablet-medium) {
+                margin: 0 0 0 90px;
+                max-width: 397px;
+                left: 30px;
+                top: 0;
+            }
+
+            @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+                max-width: 270px;
+                left: 40px;
+            }
+
+            .product {
+                @media screen and (max-width: $tablet-medium - 1) {
+                    margin-bottom: 0;
+                }
+
+                .image {
+                    position: relative;
+                    opacity: 1;
+                    z-index: 1;
+                }
+            }
+
+            .info-product {
+                display: flex;
+                margin-top: 10px;
+                align-items: center;
+
+                @media screen and (min-width: $tablet-medium) {
+                    margin-top: 17px;
+                }
+
+                @media screen and (max-width: $tablet-medium - 1) {
+                    justify-content: space-between;
+                }
+
+                .name-product {
+                    font-size: 18px;
+                    font-family: $font-2;
+                }
+
+                .price {
+                    font-family: $font-1;
+                    font-size: 15px;
+                    margin-left: 70px;
+                    font-weight: 500;
+                    position: relative;
+                    top: 3px;
+                }
+            }
+        }
+
+        .group-icon-slider {
+            left: -110px;
+
+            @media screen and (max-width: $tablet-medium - 1) {
+                width: 100%;
+                left: 0;
+            }
+
+            .icon-slider {
+                border: 1px solid #f3eee7;
+
+                @media screen and (max-width: $tablet-medium - 1) {
+                    width: 45px;
+                    height: 45px;
+                }
+
+                &.icon-slider-left {
+                    top: 50%;
+                    left: -60px;
+
+                    @media screen and (min-width: $tablet-medium) {
+                        top: -80px;
+                        left: 0;
+                    }
+                }
+
+                &.icon-slider-right {
+                    top: 50%;
+                    right: -60px;
+
+                    @media screen and (min-width: $tablet-medium) {
+                        top: 0;
+                        right: auto;
+                    }
+                }
+            }
+        }
+
+        .news {
+            text-align: center;
+            max-width: 563px;
+
+            @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+                max-width: 400px;
+            }
+
+            .list-product-for {
+                pointer-events: none;
+            }
+
+            .image {
+                margin-bottom: 25px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .title-news {
+                font-size: 34px;
+                line-height: 50px;
+                font-family: $font-2;
+                margin-bottom: 20px;
+
+                @media screen and (max-width: $tablet-medium - 1) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import '../includes/variables';
+
+.block-list-journal {
+    margin: 60px 0 20px;
+
+    @media screen and (min-width: $tablet-medium) {
+        margin: 126px 0 20px;
+    }
+
+    .title-large {
+        color: $light-sky-blue;
+        margin-bottom: 40px;
+        text-align: center;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 90px;
+        }
+    }
+
+    .item-journal {
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.item-journal {
+    position: relative;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet-medium) {
+        margin-bottom: 50px;
+    }
+
+    .image {
+        margin-bottom: 20px;
+    }
+
+    .category {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .name {
+        font-family: $font-2;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+
+    .descriptions {
+        line-height: 22px;
+    }
+}

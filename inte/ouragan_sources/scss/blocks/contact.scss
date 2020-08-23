@@ -1,0 +1,76 @@
+@import '../includes/variables';
+
+.block-contact {
+    background-color: $ice;
+
+    @media screen and (min-width: $desktop-small) {
+        margin-top: 140px;
+    }
+
+    @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+        padding: 40px 0;
+    }
+
+    .wrapper {
+        max-width: 1030px;
+
+        @media screen and (min-width: $tablet-medium) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .image {
+        @media screen and (min-width: $tablet-medium) {
+            max-width: 443px;
+            position: relative;
+            top: -90px;
+        }
+
+        @media screen and (min-width: $desktop-medium) {
+            flex-shrink: 0;
+        }
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            margin: 0 -20px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .col-right {
+        @media screen and (min-width: $tablet-medium) {
+            padding-left: 50px;
+        }
+
+        @media screen and (min-width: $desktop-small) {
+            padding-left: 170px;
+        }
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            padding: 50px 0 65px;
+        }
+
+        .title {
+            color: $pale-aqua;
+            margin-bottom: 30px;
+        }
+
+        .descriptions {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 70px;
+
+            p {
+                margin-bottom: 27px;
+
+                a {
+                    border-bottom: 1px solid #7d7d88;
+                    color: #7d7d88;
+                }
+            }
+        }
+    }
+}

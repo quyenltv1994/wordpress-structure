@@ -1,0 +1,361 @@
+@import '../includes/variables';
+
+.block-journal-detail {
+    @media screen and (min-width: $tablet-medium) {
+        margin-top: 57px;
+    }
+
+    .breadcrumbs {
+        @media screen and (max-width: $tablet-medium - 1) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .top-journal-detail {
+        text-align: center;
+        max-width: 1037px;
+        margin: 0 auto 40px;
+
+        .category {
+            font-size: 15px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .title2 {
+            margin-bottom: 10px;
+        }
+
+        .author {
+            font-size: 15px;
+            margin-bottom: 40px;
+
+            strong {
+                font-weight: 500;
+            }
+        }
+
+        .image {
+            margin-bottom: 30px;
+
+            @media screen and (min-width: $tablet-medium) {
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    .detail {
+        max-width: 823px;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: 500;
+            color: #191919;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 35px;
+            line-height: 40px;
+            font-weight: 500;
+            color: #191919;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 25px;
+            line-height: 35px;
+            color: $steel;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        h4, h5, h6 {
+            font-size: 22px;
+            line-height: 32px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 32px;
+            margin-bottom: 30px;
+
+            strong {
+                font-weight: 500;
+            }
+
+            a {
+                font-weight: 500;
+                border-bottom: 1px solid $dark-grey;
+            }
+        }
+
+        ul {
+            margin-bottom: 40px;
+
+            li {
+                font-size: 22px;
+                line-height: 32px;
+                padding-left: 25px;
+                position: relative;
+
+                &:before {
+                    content: '-';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        ol {
+            margin-bottom: 40px;
+            counter-reset: number;
+
+            li {
+                font-size: 22px;
+                line-height: 32px;
+                padding-left: 35px;
+                position: relative;
+
+                &:before {
+                    counter-increment: number;
+                    content: counter(number) '.';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        .wp-block-gallery {
+            ul {
+
+                li {
+                    padding-left: 0;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+
+            figcaption {
+                margin-top: -35px;
+            }
+        }
+
+        figcaption {
+            font-size: 16px;
+            margin: 20px 0 40px;
+        }
+
+        .wrap-text-image {
+            margin-bottom: 50px;
+
+            &:before {
+                @media screen and (min-width: $tablet-medium) {
+                    content: '';
+                    height: 128px;
+                    width: 0;
+                    float: right;
+                }
+            }
+
+            &:after {
+                display: block;
+                content: '';
+                clear: both;
+            }
+
+            .spacer {
+                @media screen and (min-width: $tablet-medium) {
+                    height: 128px;
+                    width: 0;
+                    float: right;
+                }
+            }
+
+            .image {
+                @media screen and (min-width: $tablet-medium) {
+                    width: 373px;
+                    float: right;
+                    clear: right;
+                    margin: 20px 0 20px 20px;
+
+                    &.alignleft {
+                        margin: 20px 20px 20px 0;
+                        float: left;
+                        clear: left;
+                    }
+                }
+
+                img {
+                    margin-bottom: 5px;
+                }
+
+                small {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .block-blockquote {
+            margin-bottom: 40px;
+            padding-left: 20px;
+
+            blockquote {
+                position: relative;
+                font-size: 35px;
+                line-height: 50px;
+                margin-bottom: 9px;
+
+                &:before {
+                    content: '«';
+                    color: $steel;
+                    position: absolute;
+                    left: -20px;
+                }
+
+                &:after {
+                    content: '«';
+                    width: 2px;
+                    left: 15px;
+                    top: -7px;
+                    bottom: 5px;
+                    position: relative;
+                    transform: rotate(180deg);
+                    display: inline-block;
+                    color: $steel;
+                }
+            }
+
+            .author {
+                color: $steel;
+            }
+        }
+
+        .wp-block-quote {
+            margin-bottom: 40px;
+            padding-left: 20px;
+
+            p {
+                position: relative;
+                font-size: 22px;
+                line-height: 32px;
+                margin-bottom: 9px;
+                font-weight: 300;
+
+                &:before {
+                    content: '«';
+                    color: $steel;
+                    position: absolute;
+                    left: -20px;
+                }
+
+                &:after {
+                    content: '«';
+                    width: 2px;
+                    left: 15px;
+                    top: -5px;
+                    bottom: 5px;
+                    position: relative;
+                    transform: rotate(180deg);
+                    display: inline-block;
+                    color: $steel;
+                }
+            }
+
+            cite {
+                color: $steel;
+            }
+        }
+
+        .btn-full {
+            max-width: 255px;
+            margin-bottom: 30px;
+
+            @media screen and (min-width: $tablet-medium) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    .partager-journal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+        margin: 40px 0 35px;
+        border-bottom: 1px solid $light-peach;
+
+        p {
+            margin-bottom: 0;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        .social {
+            margin-bottom: 0;
+
+            li:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .addtoany_shortcode {
+            .addtoany_list {
+                a {
+                    background-color: $white;
+
+                    .a2a_svg {
+                        background-color: transparent !important;
+                    }
+
+                    svg {
+                        path {
+                            fill: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .group-btn {
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+            min-width: auto;
+
+            &.prev {
+                padding: 0 0 0 30px;
+
+                &:before {
+                    right: auto;
+                    left: 0;
+                }
+
+                &:hover {
+                    &:before {
+                    left: -20px;
+                    }
+
+                    &:after {
+                        left: -20px;
+                    }
+                }
+
+                &:after {
+                    right: auto;
+                    left: 0;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}

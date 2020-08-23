@@ -1,0 +1,64 @@
+@import '../includes/variables';
+
+.wrap-cursor {
+    width: 63%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    cursor: none;
+
+    .left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+    }
+
+    .right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+    }
+
+    @media screen and (max-width: $desktop-small - 1) {
+        display: none;
+    }
+}
+
+.node {
+    pointer-events: none;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: block;
+    //transition: all .5s;
+    opacity: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/icon-prev.svg');
+    background-size: 60px;
+    background-repeat: no-repeat;
+    transform: translate(-20px, -50px);
+
+    &.expend {
+        background-image: none;
+    }
+
+    &.right {
+        background-image: url('../images/icon-next.svg');
+    }
+
+    &.not-hover {
+        visibility: hidden;
+    }
+
+    &.moving {
+        opacity: 1;
+    }
+}
+

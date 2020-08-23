@@ -1,0 +1,124 @@
+{############################################################################################}
+{########################################### USAGE ##########################################}
+{############################################################################################}
+
+{#
+    {% include '@blocks/wysiwyg-content.twig' with {
+        'additionnal_attributes': {
+            'id': 'wysiwyg-content-1'
+        },
+        'additionnal_classes': ''
+    } %}
+#}
+
+{############################################################################################}
+{########################################### CODE ###########################################}
+{############################################################################################}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_css('public/assets/css/blocks/wysiwyg-content.css', 3) }}
+        {{ ouragan_include_once_js('public/assets/js/blocks/wysiwyg-content.js', 3) }}
+    {% endif %}
+{% endif %}
+
+{% set block_class = 'wysiwyg-content_block' %}
+
+{% if additionnal_classes %}
+    {% set block_class = block_class ~ ' ' ~ additionnal_classes|trim %}
+{% endif %}
+
+<div class="{{ block_class }}"
+{% for key, additionnal_attr in additionnal_attributes %}
+{{ key }}="{{ additionnal_attr }}"
+{% endfor %}
+>
+
+<h4>Simple paragraph :</h4>
+
+<p>Lorem ipsum dolor sit amet, <a href="#" title="Hey!">consectetur</a> adipisicing elit. A assumenda beatae
+    consequuntur delectus ea, ex facilis id
+    iste iusto labore laboriosam laudantium, libero nobis provident quo repellat repellendus tempore ut!</p>
+
+<h4>Test list ul :</h4>
+
+<ul>
+    <li>Lorem ipsum dolor</li>
+    <li><a href="#" title="test title">Lorem ipsum dolor</a></li>
+    <li><a href="#" title="test title">Lorem ipsum dolor</a></li>
+</ul>
+
+<h4>Test list ol :</h4>
+
+<ol>
+    <li>Lorem ipsum dolor/li>
+    <li><a href="#" title="test title">Lorem ipsum dolor</a></li>
+    <li><a href="#" title="test title">Lorem ipsum dolor</a></li>
+</ol>
+
+<h4>Test video :</h4>
+
+<video controls="">
+    <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+</video>
+
+<h4>Test blockquote without p :</h4>
+
+<blockquote>
+    Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're
+    pierced.
+</blockquote>
+
+<h4>Test blockquote with p :</h4>
+
+<blockquote>
+    <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're
+        pierced.</p>
+    <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're
+        pierced.</p>
+    <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're
+        pierced.</p>
+</blockquote>
+
+<h4>Table (2 columns and 2 rows) :</h4>
+
+<table>
+    <tbody>
+    <tr>
+        <td><strong>test</strong></td>
+        <td>test</td>
+    </tr>
+    <tr>
+        <td><strong>test</strong></td>
+        <td>test</td>
+    </tr>
+    <tr>
+        <td><strong>test</strong></td>
+        <td>test</td>
+    </tr>
+    <tr>
+        <td><strong>test</strong></td>
+        <td>test</td>
+    </tr>
+    </tbody>
+</table>
+
+<h4>Test hr :</h4>
+
+<hr>
+
+<h4>Test link image :</h4>
+
+<p>
+    <a href="#">
+        <img src="https://i.pinimg.com/originals/85/73/92/857392c1430a6fa8ba7dae6bfd8166fa.jpg" alt="test alt"/>
+    </a>
+</p>
+
+<h4>Test normal image :</h4>
+
+<p>
+    <img src="https://i.pinimg.com/originals/85/73/92/857392c1430a6fa8ba7dae6bfd8166fa.jpg" alt="test alt"/>
+</p>
+
+</div>

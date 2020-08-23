@@ -1,0 +1,27 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+.search-page-header {
+    margin: 30px 0;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+
+    span {
+        font-weight: 500;
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            display: block;
+        }
+    }
+}
+
+.search-no-results {
+    .search-page-header {
+        p + p {
+            font-size: 20px;
+            line-height: 20px;
+            margin-top: 20px;
+        }
+    }
+}

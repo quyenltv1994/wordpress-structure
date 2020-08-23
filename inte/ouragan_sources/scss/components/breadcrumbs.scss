@@ -1,0 +1,24 @@
+@import '../includes/variables';
+
+.breadcrumbs {
+    li {
+        display: inline-block;
+        padding-right: 10px;
+        margin-right: 10px;
+        position: relative;
+        font-size: 13px;
+
+        &:not(:last-child):after {
+            content: '/';
+            position: absolute;
+            right: -5px;
+            top: 0;
+        }
+
+        &:not(.active) {
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+.block-savoir-faire {
+    padding: 50px 0 56px;
+    //background-color: $pale-grey;
+    text-align: center;
+
+    @media screen and (min-width: $desktop-small) {
+        padding: 120px 0 95px;
+    }
+
+    .wrapper {
+        max-width: 1097px;
+    }
+
+    .title {
+        color: $light-sky-blue;
+        margin-bottom: 15px;
+    }
+
+    .title2 {
+        margin-bottom: 40px;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 117px;
+        }
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            font-size: 20px;
+            line-height: 31px;
+        }
+    }
+
+    .video {
+        position: relative;
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 82px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .descriptions {
+        font-size: 20px;
+        line-height: 35px;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $tablet-medium) {
+            font-size: 30px;
+            line-height: 56px;
+        }
+
+        a {
+            border-bottom: 1px solid $dark-grey;
+        }
+    }
+}

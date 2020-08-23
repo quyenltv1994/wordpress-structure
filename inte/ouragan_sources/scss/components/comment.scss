@@ -1,0 +1,15 @@
+.icon-comment {
+    position: fixed;
+    height: 63px;
+    width: 63px;
+    border-radius: 50%;
+    background-color: #191919;
+    top: 500px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}

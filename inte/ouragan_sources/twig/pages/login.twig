@@ -1,0 +1,78 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} login-html{% endblock %}
+{% block bodyclass %}{{ parent() }} login-body{% endblock %}
+
+{% block title %}Login - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-login">
+        <div class="wrapper">
+            <h2 class="title2">Connectez-vous à nos chapeaux</h2>
+
+            <div class="row">
+                <div class="col-6 col-left">
+                    <p class="title-col">Déjà inscrit ?</p>
+
+                    <form action="#" data-parsley-validate="">
+                        <div class="form-group">
+                            <label>Adresse e-mail*</label>
+                            <input type="email" class="form-control" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mot de passe*</label>
+                            <input inlength="6" data-parsley-minlength="6" type="password" class="form-control" required="">
+                        </div>
+
+                        <p class="forgot-password"><a href="">Mot de passe oublié ?</a></p>
+
+                        <button class="btn-full black">Se connecter</button>
+
+                        <p class="note">*champs obligatoires</p>
+                    </form>
+                </div>
+
+                <div class="col-6 col-right">
+                    <p class="title-col">Première visite ?</p>
+
+                    <div class="descriptions">
+                        <p>La création d’un compte présente de nombreux avantages: vérifier plus rapidement, conserver
+                            plusieurs adresses, suivre les commandes, etc.</p>
+                    </div>
+
+                    <a href="" class="btn-full">Créer un compte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

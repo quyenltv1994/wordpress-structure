@@ -1,0 +1,328 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+.block-validation {
+    margin: 26px 0 50px;
+
+    @media screen and (min-width: $tablet-medium) {
+        margin: 56px 0;
+    }
+
+    .col-right {
+        @media screen and (min-width: $desktop-medium) {
+            padding-left: 125px;
+        }
+    }
+
+    .title2 {
+        margin-bottom: 30px;
+    }
+
+    .label-checkbox {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .list-steps {
+        margin-top: 67px;
+
+        .item {
+            margin-bottom: 40px;
+
+            @media screen and (min-width: $tablet-medium) {
+                margin-bottom: 82px;
+            }
+
+            &.step1 {
+                .checkbox-group {
+                    margin: 59px 0 35px;
+
+                    label {
+                        font-size: 20px;
+                        font-weight: 500;
+
+                        @media screen and (min-width: $tablet-medium) {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+
+            &.step2 {
+                .des {
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #191919;
+                    margin: 38px 0 30px;
+                }
+            }
+
+            &.step3 {
+                .note {
+                    margin-bottom: 45px;
+                }
+
+                .wrap-form-group {
+                    display: flex;
+
+                    .form-group {
+                        width: 66.66%;
+
+                        &:last-child {
+                            width: 33.33%;
+                            margin-left: 10px;
+
+                            @media screen and (min-width: $tablet-medium) {
+                                margin-left: 30px;
+                            }
+                        }
+                    }
+                }
+
+                .card {
+                    padding-left: 60px;
+                    background-image: url('../images/icon-card.png') ;
+                    background-repeat: no-repeat;
+                    background-position: 10px;
+                }
+            }
+
+            .title-step {
+                font-size: 25px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+
+                @media screen and (min-width: $tablet-medium) {
+                    font-size: 30px;
+                }
+
+                span {
+                    padding-top: 5px;
+                    height: 44px;
+                    width: 44px;
+                    border: 1.5px solid #191919;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 22px;
+                    margin-right: 20px;
+                    position: relative;
+                    top: -4px;
+                }
+            }
+
+            .text-verify {
+                font-size: 20px;
+                line-height: 32px;
+                color: $grey-teal;
+                font-weight: 500;
+                margin: 45px 0 20px;
+            }
+
+            .list-payments {
+                margin-bottom: 30px;
+            }
+
+            .list-cards {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .payment_box.payment_method_paypal {
+        display: none !important;
+    }
+
+    label a.about_paypal {
+        display: none !important;
+    }
+
+    .wc_payment_method.payment_method_paypal {
+        position: relative;
+        input {
+            position: absolute;
+            height: 26px;
+            width: 100%;
+            opacity: 0;
+            z-index: 1;
+            left: 0;
+            top: -5px;
+
+            &:checked {
+                + label {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        label {
+            padding-left: 40px;
+            font-size: 17px;
+            color:  $steel;
+            line-height: 21px;
+
+            &:before {
+                content: '';
+                height: 24px;
+                width: 24px;
+                position: absolute;
+                left: 0;
+                top: -4px;
+                border: 1px solid #979797;
+                border-radius: 50%;
+            }
+
+            &:after {
+                content: '';
+                background-color: #191919;
+                position: absolute;
+                height: 6px;
+                width: 6px;
+                left: 9px;
+                top: 5px;
+                border-radius: 50%;
+                opacity: 0;
+            }
+        }
+    }
+
+    .wc_payment_method.payment_method_stripe {
+        position: relative;
+
+        #payment_method_stripe {
+            position: absolute;
+            height: 26px;
+            width: 100%;
+            opacity: 0;
+            z-index: 1;
+            left: 0;
+            top: -5px;
+
+            &:checked {
+                + .list-cards {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .list-cards {
+            padding-top: 40px;
+
+            &:before {
+                content: '';
+                height: 24px;
+                width: 24px;
+                position: absolute;
+                left: 0;
+                top: -4px;
+                border: 1px solid #979797;
+                border-radius: 50%;
+            }
+
+            &:after {
+                content: '';
+                background-color: #191919;
+                position: absolute;
+                height: 6px;
+                width: 6px;
+                left: 9px;
+                top: 5px;
+                border-radius: 50%;
+                opacity: 0;
+            }
+        }
+    }
+
+    #parcel_shop_info {
+        display: none;
+    }
+
+    #modaal_link {
+        text-decoration: underline;
+    }
+
+    #stripe-payment-data {
+        > p {
+            display: none;
+        }
+
+        .woocommerce-SavedPaymentMethods-saveNew {
+            label {
+                font-size: 17px !important;
+                line-height: 22px;
+                color: #191919!important;
+            }
+        }
+
+        .form-row {
+            margin-bottom: 25px;
+
+            label {
+                display: block;
+                font-size: 15px;
+                color: $steel;
+                margin-bottom: 10px;
+            }
+
+            .wc-stripe-elements-field {
+                margin: 0;
+                padding: 12px 15px;
+                border: 1px solid $light-peach;
+            }
+
+            .InputElement{
+                display: block;
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid $light-peach;
+                font-size: 16px;
+                color: #7d7d87 !important;
+
+                @include placeholder {
+                    color: #7d7d87;
+                }
+            }
+
+            .stripe-card-group {
+                .wc-stripe-elements-field {
+                    padding-left: 60px;
+                }
+
+                .stripe-card-brand {
+                    background: no-repeat url('../images/icon-card.png') !important;
+                    right: auto;
+                    left: 15px;
+                    width: 35px;
+                }
+            }
+        }
+    }
+
+    .wc-credit-card-form {
+        .form-row-wide {
+            width: 100%;
+        }
+
+        .form-row-first {
+            @media screen and (min-width: $tablet-medium) {
+                width: calc(66.66% - 15px);
+                float: left;
+            }
+        }
+
+        .form-row-last {
+            @media screen and (min-width: $tablet-medium) {
+                margin-left: 30px;
+                width: calc(33.33% - 15px);
+                float: left;
+            }
+        }
+    }
+}

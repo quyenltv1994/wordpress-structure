@@ -1,0 +1,208 @@
+@import '../includes/variables';
+
+.block-boutiques {
+    padding: 148px 0 40px;
+    background-color: $ice;
+
+    @media screen and (min-width: $desktop-small) {
+        padding: 160px 0 40px;
+    }
+
+    ~ .block-instagram {
+        @media screen and (min-width: $tablet-medium) {
+            padding-top: 80px;
+        }
+    }
+
+    .title-large {
+        text-align: center;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 70px;
+        }
+    }
+
+    .image {
+        overflow: hidden;
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .col-right {
+        display: flex;
+        justify-content: center;
+        //align-items: center;
+        height: 100%;
+    }
+
+    .col-left {
+        @media screen and (min-width: $desktop-small) {
+            padding-left: 110px;
+        }
+
+        @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+            padding-left: 30px;
+        }
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .item-boutiques {
+        margin-bottom: 40px;
+
+        @media screen and (min-width: $desktop-small) {
+            margin-bottom: 125px;
+        }
+
+        > .image {
+            margin-bottom: 40px;
+
+            @media screen and (min-width: $desktop-small) {
+                margin-bottom: 117px;
+            }
+        }
+
+        &:nth-child(even) {
+            .row {
+                flex-direction: row-reverse;
+
+                .col-left {
+                    @media screen and (min-width: $desktop-small) {
+                        padding: 0 110px 0 15px;
+                    }
+
+                    @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+                        padding: 0 30px 0 15px;
+                    }
+                }
+            }
+        }
+
+        .title2 {
+            font-size: 45px;
+            line-height: 38px;
+            margin-bottom: 35px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 28px;
+
+            &.address {
+                color: $grey-teal;
+                font-weight: bold;
+                margin: 40px 0 12px;
+            }
+
+            small {
+                font-size: 15px;
+                line-height: 21px;
+            }
+
+            a {
+                color: #7d7d87;
+                border-bottom: 1px solid #7d7d87;
+            }
+        }
+
+        table {
+            td {
+                padding: 5px 15px 5px 0;
+                font-size: 20px;
+
+                &:first-child {
+                    min-width: 120px;
+                }
+            }
+        }
+
+        .phone {
+            margin-top: 35px;
+        }
+    }
+
+    .descriptions-large {
+        max-width: 825px;
+        margin-bottom: 40px;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 150px;
+            margin-left: 95px;
+        }
+
+        @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+            margin-bottom: 60px;
+        }
+    }
+
+    .points-sale {
+        @media screen and (min-width: $tablet-medium) {
+            margin: 0 95px;
+        }
+
+        .title2 {
+            font-size: 45px;
+            line-height: 38px;
+            margin-bottom: 30px;
+
+            @media screen and (min-width: $desktop-small) {
+                margin-bottom: 90px;
+            }
+        }
+
+        .list-item {
+            .item {
+                font-size: 20px;
+                margin-bottom: 30px;
+
+                @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+                    width: 33.33%;
+                }
+
+                .season {
+                    font-family: $font-2;
+                    margin-bottom: 20px;
+                }
+
+                .address {
+                    color: $grey-teal;
+                    font-weight: bold;
+                    margin-bottom: 35px;
+                    text-transform: lowercase;
+                }
+
+                .phone {
+                    margin-bottom: 35px;
+
+                    a {
+                        color: $steel;
+                        border-bottom: 1px solid $steel;
+                    }
+                }
+
+                .descriptions {
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+
+    .image-bottom {
+        max-width: 1100px;
+        margin: 15px auto 0;
+
+        @media screen and (min-width: $desktop-small) {
+            margin: 175px auto 0;
+        }
+
+        @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+            margin: 45px auto 0;
+        }
+    }
+}

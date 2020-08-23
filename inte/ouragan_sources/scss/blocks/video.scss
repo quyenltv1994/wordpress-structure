@@ -1,0 +1,35 @@
+@import '../includes/variables';
+
+.block-video {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $tablet-medium) {
+        text-align: center;
+    }
+
+    .video {
+        position: relative;
+        margin-bottom: 30px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .title {
+        font-size: 34px;
+        font-family: $font-2;
+        margin-bottom: 35px;
+        font-weight: normal;
+
+        @media screen and (min-width: $tablet-medium) {
+            font-size: 45px;
+            margin-bottom: 25px;
+        }
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            line-height: 50px;
+        }
+    }
+}

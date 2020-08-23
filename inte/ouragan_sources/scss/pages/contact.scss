@@ -1,0 +1,110 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+.block-contact-page {
+    margin: 30px 0;
+
+    @media screen and (min-width: $tablet-medium) {
+        margin: 50px 0;
+    }
+
+    ~ .block-services {
+        margin-bottom: -10px;
+
+        .wrapper {
+            padding-bottom: 0;
+        }
+    }
+
+    .info {
+        padding: 30px 20px;
+        background-color: $ice;
+
+        @media screen and (min-width: $desktop-small) {
+            padding: 65px 106px;
+        }
+
+        .title-large {
+            margin-bottom: 35px;
+        }
+
+        form {
+            margin-bottom: 50px;
+        }
+
+        .questions {
+            font-size: 20px;
+            line-height: 28px;
+            padding-bottom: 53px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid $white;
+
+            .label {
+                font-size: 20px;
+                line-height: 28px;
+                margin-bottom: 17px;
+                font-weight: 500;
+            }
+
+            ul {
+                margin-bottom: 15px;
+
+                a {
+                    color: #7d7d87;
+                    border-bottom: 1px solid #7d7d87;
+                }
+            }
+        }
+    }
+
+    .col-right {
+        margin-top: 30px;
+
+        @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+            margin-left: 20px;
+            width: 38%;
+        }
+    }
+}
+
+.item-contact {
+    padding-bottom: 50px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $pale-lilac;
+
+    &.bottom {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-top: 45px;
+
+        .title-item-contact {
+            margin-bottom: 20px;
+        }
+    }
+
+    .title2 {
+        font-size: 45px;
+        line-height: 38px;
+        margin-bottom: 38px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 28px;
+
+        strong {
+            font-weight: 500;
+        }
+
+        a {
+            color: #7d7d87;
+            border-bottom: 1px solid #7d7d87;
+        }
+    }
+
+    .address {
+        color: $grey-teal;
+        font-weight: bold;
+        margin: 38px 0 13px;
+    }
+}

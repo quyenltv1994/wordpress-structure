@@ -1,0 +1,103 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+.block-aide {
+    margin: 28px 0 50px;
+    opacity: 0;
+
+    @media screen and (min-width: $desktop-small) {
+        margin: 40px 0 50px;
+    }
+
+    .info {
+        padding: 30px 20px;
+        background-color: $ice;
+
+        @media screen and (min-width: $tablet-medium) {
+            padding: 40px 40px 60px;
+        }
+
+        .title-large {
+            margin-bottom: 25px;
+        }
+
+        .list-item {
+            margin-bottom: 50px;
+
+            .item {
+                border-bottom: 1px solid $very-light-pink;
+
+                .title-item {
+                    font-size: 20px;
+                    line-height: 22px;
+                    padding: 20px 30px 20px 0;
+                    position: relative;
+                    cursor: pointer;
+
+                    &.active {
+                        &:after {
+                            transform: rotate(180deg) translateY(-50%);
+                        }
+                    }
+
+                    &:after {
+                        content: '\e902';
+                        font-family: 'icomoon' !important;
+                        font-size: 5px;
+                        @include positionRightMiddle(15px);
+                        line-height: 0;
+                    }
+                }
+
+                .des {
+                    display: none;
+                    line-height: 22px;
+                    padding-bottom: 20px;
+
+                    ul {
+                        list-style: initial;
+                        padding-left: 15px;
+                    }
+
+                    ol {
+                        list-style: decimal;
+                        padding-left: 15px;
+                    }
+                }
+
+                table {
+                    width: 100%;
+                    margin: 10px 0;
+
+                    th {
+                        font-weight: 400;
+                    }
+
+                    th , td {
+                        padding: 10px 2px;
+                        border: 1px solid $black;
+
+                        @media screen and (min-width: $tablet-medium) {
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-full {
+            display: inline-block;
+            min-width: 226px;
+            width: auto;
+        }
+    }
+
+    .col-right {
+        margin-top: 40px;
+
+        .item-contact:first-child {
+            border-bottom: 0;
+            margin-bottom: 10px;
+        }
+    }
+}

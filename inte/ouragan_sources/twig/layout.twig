@@ -1,0 +1,168 @@
+{% set random = random(99999999999) %}
+{% set page_description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' %}
+<!DOCTYPE html><!--[if IE ]>
+<html class="ie {% block htmlclass %}{% endblock %}" lang="{{ lang_code }}"
+      dir="ltr">
+<![endif]-->
+<!--[if !(IE)]><! -->
+<html lang="{{ lang_code }}" dir="ltr" class="{% block htmlclass %}{% endblock %}">
+<!--<![endif]-->
+<head>
+    <style>html{visibility: hidden;opacity:0;}</style>
+    <script>var ouragan_timer = Date.now();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width,height=device-height,shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google" content="notranslate">
+    <!--[if (IEMobile)]>
+    <meta http-equiv="cleartype" content="on">
+    <![endif]-->
+    {% block seo_meta %}
+        <meta name="robots" content="{% block robots %}noindex, nofollow{% endblock %}">
+        <title>{% block title %}{{ project_name }}{% endblock %}</title>
+        <meta name="description" content="{% block description %}{{ page_description }}{% endblock %}">
+        <!-- <link rel="canonical" href="http://google.fr/"/> -->
+        <!-- <link rel="alternate" href="http://google.com/" hreflang="en"/> -->
+    {% endblock %}
+    {% block social_meta %}
+        <meta name="og:type" content="website">
+        <meta name="og:title" content="{% block title %}{{ project_name }}{% endblock %}">
+        <meta name="og:site_name" content="{{ project_name }}">
+        <meta name="og:description" content="{% block description %}{{ page_description }}{% endblock %}">
+        <meta name="og:image" content="assets/images/screenshot.png?{{ random }}">
+        <meta name="og:locale" content="{{ lang_code_extended }}">
+        <meta name="image" content="assets/images/screenshot.png?{{ random }}">
+        <!-- <meta name="og:url" content="http://google.fr/"> -->
+        <!-- <meta name="fb:app_id" content="123456789"> -->
+        <!-- <meta name="google-site-verification" content="..."/> -->
+    {% endblock %}
+    <!--
+        Testing tool : https://search.google.com/structured-data/testing-tool
+        Documentation : https://developers.google.com/search/docs/data-types/corporate-contact
+    -->
+    <script type='application/ld+json'>
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "http://my-website-url.com/#organization",
+          "url": "http://my-organization-or-website-url.com/",
+          "logo": "http://my-website-url.com/path/to/logo.png",
+          "name": "Name of the organization",
+          "sameAs": [
+            "https://www.facebook.com/my-organization-facebook-page-url/",
+            "https://www.instagram.com/my-organization-instagram-profile-url/",
+            "https://www.youtube.com/channel/my-organization-youtube-channel-url/",
+            "https://www.linkedin.com/company/my-organization-linkedin-profile-url/"
+          ],
+          "contactPoint": [{
+            "@type": "ContactPoint",
+            "telephone": "+33 6 76 76 76 76",
+            "contactType": "customer service",
+            "contactOption": [
+              "HearingImpairedSupported",
+              "TollFree"
+            ],
+            "areaServed": [
+              "FR",
+              "CHE",
+              "BEL",
+              "CA"
+            ],
+            "availableLanguage": [
+              "French"
+            ]
+          }]
+        }
+    </script>
+    {% block favicons %}
+        {% if include_favicon %}
+            <link rel="apple-touch-icon" sizes="114x114"
+                  href="assets/images/favicon/apple-touch-icon-114x114.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="120x120"
+                  href="assets/images/favicon/apple-touch-icon-120x120.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="144x144"
+                  href="assets/images/favicon/apple-touch-icon-144x144.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="152x152"
+                  href="assets/images/favicon/apple-touch-icon-152x152.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="180x180"
+                  href="assets/images/favicon/apple-touch-icon-180x180.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="57x57"
+                  href="assets/images/favicon/apple-touch-icon-57x57.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="60x60"
+                  href="assets/images/favicon/apple-touch-icon-60x60.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="72x72"
+                  href="assets/images/favicon/apple-touch-icon-72x72.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="76x76"
+                  href="assets/images/favicon/apple-touch-icon-76x76.png?{{ random }}">
+            <link rel="apple-touch-startup-image" href="assets/images/favicon/apple-touch-icon.png?{{ random }}">
+            <link rel="icon" type="image/png" sizes="16x16"
+                  href="assets/images/favicon/favicon-16x16.png?{{ random }}">
+            <link rel="icon" type="image/png" sizes="228x228"
+                  href="assets/images/favicon/coast-228x228.png?{{ random }}">
+            <link rel="icon" type="image/png" sizes="32x32"
+                  href="assets/images/favicon/favicon-32x32.png?{{ random }}">
+            <link rel="manifest" href="assets/images/favicon/manifest.json?{{ random }}"
+                  crossorigin="use-credentials">
+            <link rel="shortcut icon" href="assets/images/favicon/favicon.ico?{{ random }}">
+            <link rel="yandex-tableau-widget" href="assets/images/favicon/yandex-browser-manifest.json?{{ random }}">
+            <meta name="msapplication-TileImage" content="assets/images/favicon/mstile-144x144.png?{{ random }}">
+            <meta name="msapplication-config" content="assets/images/favicon/browserconfig.xml?{{ random }}">
+            <meta name="theme-color" content="{{ favicon_color }}">
+            <meta name="msapplication-TileColor" content="{{ favicon_color }}">
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+            <meta name="apple-mobile-web-app-title" content="{{ favicon_appname }}">
+            <meta name="application-name" content="{{ favicon_appname }}">
+        {% endif %}
+    {% endblock %}
+    <script>
+        var ouragan_print_css_url = 'assets/css/print.css?{{ random }}';
+    </script>
+
+
+
+    {% if is_ouragan_used is defined %}
+        {% if is_ouragan_used %}
+            {{ ouragan_include_once_css('public/assets/css/main.css', 1) }}
+        {% endif %}
+    {% endif %}
+</head>
+<body class="{% block bodyclass %}{% endblock %} ">
+
+<div class="loader">
+    <img src="assets/images/loader.gif" alt="">
+</div>
+
+<p class="icon-comment"></p>
+{% include '@blocks/popup/popup-panier.twig' %}
+{% block header %}{% endblock %}
+<div class="main-scrollbar">
+{% block main %}
+    {% block pre_content %}{% endblock %}
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+    {% block post_content %}{% endblock %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+</div>
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/main.js', 1) }}
+    {% endif %}
+{% endif %}
+{#<script src="//code.jquery.com/jquery-3.2.1.slim.min.js"></script>#}
+{#<script src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.1.2/parsley.min.js"></script>#}
+{#<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>#}
+{#<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>#}
+{% block fonts %}
+    <!-- <link href="{{ 'https://fonts.googleapis.com/css?family=Lato:400,700,900|Roboto:400,500'|replace({'|': '|'|url_encode}) }}" rel="stylesheet"> -->
+{% endblock %}
+
+</body>
+</html>

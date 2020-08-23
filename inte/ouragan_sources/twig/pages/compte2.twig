@@ -1,0 +1,87 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} compte2-html{% endblock %}
+{% block bodyclass %}{{ parent() }} compte2-body{% endblock %}
+
+{% block title %}compte2 - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-comple">
+        <div class="wrapper">
+            <div class="title-box">
+                <h2 class="title2">Bonjour Camille</h2>
+                <span>Bienvenue sur votre complte personnel</span>
+            </div>
+
+            <div class="tab-navigate">
+                <ul class="nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link">Details personnels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">commandes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link">Adresses</a>
+                    </li>
+                </ul>
+            </div>
+
+            <h3 class="title-form">
+                Adresse de livraison
+            </h3>
+
+            <table class="cart-table compte-table-two">
+                <thead>
+                <tr>
+                    <th class="product-info">Adresse de livraison
+                        <a href="#">
+                            Modifier
+                        </a>
+                    </th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="cart_item">
+                        <td rowspan="2">
+                            <p>Camille Pigeon</p>
+                            <p>C42 rue Beauregard</p>
+                            <p>75002 Paris, FR</p>
+                            <p>0878778675</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

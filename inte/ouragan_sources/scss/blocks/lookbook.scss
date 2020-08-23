@@ -1,0 +1,107 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+.block-lookbook {
+    .breadcrumbs {
+        @media screen and (min-width: $tablet-medium) {
+            position: relative;
+            top: 60px;
+        }
+    }
+
+    .top-journal {
+        text-align: center;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            padding-top: 30px;
+        }
+
+        .title {
+            color: $pale;
+            margin-bottom: 4px;
+        }
+
+        .total {
+            font-size: 15px;
+            letter-spacing: 2.65px;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+        }
+
+        .descriptions {
+            font-size: 20px;
+            line-height: 31px;
+            font-family: $font-2;
+
+            @media screen and (min-width: $tablet-medium) {
+                font-size: 25px;
+                line-height: 38px;
+            }
+
+            @media screen and (max-width: $tablet-medium - 1) {
+                margin-bottom: 28px;
+            }
+        }
+    }
+
+    .filter-bar {
+        margin-left: auto !important;
+        margin-bottom: 30px;
+    }
+
+    .group-filter-category {
+        margin: 25px 0 50px;
+
+        ul {
+            text-align: center;
+
+            li {
+                display: inline-block;
+                margin: 0 5px;
+                text-transform: uppercase;
+                font-size: 12px;
+
+                @media screen and (min-width: $tablet-medium) {
+                    margin: 0 15px;
+                }
+
+                &.active {
+                    a {
+                        font-weight: 500;
+                        border-bottom: 1px solid $dark-grey;
+                    }
+                }
+            }
+        }
+    }
+
+    .result {
+        text-align: center;
+        margin-top: 52px;
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            margin: 0 40px;
+        }
+
+        .text {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        @media screen and (min-width: $tablet-medium) {
+            .process {
+                margin: 0 auto 15px;
+            }
+        }
+    }
+
+    .product {
+        margin-bottom: 35px;
+
+        .image {
+            position: static !important;
+            opacity: 1 !important;
+        }
+    }
+}

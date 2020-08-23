@@ -1,0 +1,173 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} boutiques-html{% endblock %}
+{% block bodyclass %}{{ parent() }} animation-page boutiques-body{% endblock %}
+
+{% block title %}boutiques - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-boutiques">
+        <div class="wrapper">
+            <h1 class="title-large">Nos boutiques</h1>
+
+            <div class="list-item-boutiques">
+                <div class=" item-boutiques">
+                    <div class="image">
+                        <img src="assets/images/JSTEY-NE-PAS-DIFFUSER-3750.jpg" alt="">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-5 col-left">
+                            <h2 class="title2">Boutique Paris</h2>
+                            <div class="descriptions">
+                                <p>Mademoiselle Chapeaux vous accueille dans sa boutique atelier au cœur du Marais,
+                                    située à
+                                    deux pas de la place des Vosges.</p>
+                                <br>
+                                <p>Ouvert du mardi au samedi de 11h à 19h.
+                                <p><small>( L’affluence étant très élevée le samedi, favorisez vos essayages en boutique
+                                        du
+                                        mardi au
+                                        vendredi )</small></p>
+                                <p class="phone">Téléphone : <a href="tel:+33(0)172607768">+33 (0)1 72 60 77 68</a></p>
+                                <p>Email : <a href="">contact@mademoisellechapeaux.com</a></p>
+                                <p class="address">15 rue des Tournelles – 75004 Paris<br>Métro : Bastille – Saint Paul
+                                </p>
+                                <a href="" class="btn">Voir l'itinéraire</a>
+                            </div>
+                        </div>
+
+                        <div class="col-7 col-right">
+                            <div class="image">
+                                <img src="assets/images/bou2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-boutiques">
+                    <div class="image">
+                        <img src="assets/images/bou4.jpg" alt="">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-5 col-left">
+                            <h2 class="title2">Boutique Paris</h2>
+                            <div class="descriptions">
+                                <p>Mademoiselle Chapeaux vous accueille dans sa boutique atelier au cœur du Marais,
+                                    située à
+                                    deux pas de la place des Vosges.</p>
+                                <br>
+                                <p>Ouvert du mardi au samedi de 11h à 19h.
+                                <p><small>( L’affluence étant très élevée le samedi, favorisez vos essayages en boutique
+                                        du
+                                        mardi au
+                                        vendredi )</small></p>
+                                <p class="phone">Téléphone : <a href="tel:+33(0)172607768">+33 (0)1 72 60 77 68</a></p>
+                                <p>Email : <a href="">contact@mademoisellechapeaux.com</a></p>
+                                <p class="address">15 rue des Tournelles – 75004 Paris<br>Métro : Bastille – Saint Paul
+                                </p>
+                                <a href="" class="btn">Voir l'itinéraire</a>
+                            </div>
+                        </div>
+
+                        <div class="col-7 col-right">
+                            <div class="image">
+                                <img src="assets/images/bou3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="descriptions-large title2">
+                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+                    eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+                    assumenda est, omnis dolor repellendus.</p>
+            </div>
+
+            <div class="points-sale">
+                <h2 class="title2">Nos points de vente</h2>
+
+                <div class="row list-item">
+                    <div class="col-3 item">
+                        <p class="season">Primptemps</p>
+                        <p class="address">64, BOULEVARD HAUSSMANN
+                            75009 PARIS</p>
+                        <p class="phone"><a href="tel:+33(0)320334679">+33 (0)3 20 33 46 79</a></p>
+
+                        <div class="descriptions">
+                            <p>du Lundi au Mercredi de 9h30 à 20h,
+                                le Jeudi de 9h30 à 20h45,
+                                du Vendredi au Samedi de 9h30 à 20h, puis le Dimanche de 11h à 19h</p>
+                        </div>
+                    </div>
+
+                    <div class="col-3 item">
+                        <p class="season">Primptemps</p>
+                        <p class="address">64, BOULEVARD HAUSSMANN
+                            75009 PARIS</p>
+                        <p class="phone"><a href="tel:+33(0)320334679">+33 (0)3 20 33 46 79</a></p>
+
+                        <div class="descriptions">
+                            <p>du Lundi au Mercredi de 9h30 à 20h,
+                                le Jeudi de 9h30 à 20h45,
+                                du Vendredi au Samedi de 9h30 à 20h, puis le Dimanche de 11h à 19h</p>
+                        </div>
+                    </div>
+
+                    <div class="col-3 item">
+                        <p class="season">Primptemps</p>
+                        <p class="address">64, BOULEVARD HAUSSMANN
+                            75009 PARIS</p>
+                        <p class="phone"><a href="tel:+33(0)320334679">+33 (0)3 20 33 46 79</a></p>
+
+                        <div class="descriptions">
+                            <p>du Lundi au Mercredi de 9h30 à 20h,
+                                le Jeudi de 9h30 à 20h45,
+                                du Vendredi au Samedi de 9h30 à 20h, puis le Dimanche de 11h à 19h</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="image-bottom">
+                <div class="image">
+                    <img src="assets/images/points-sale.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include '@blocks/services.twig'  with {"services_classes": "ice"} %}
+    {% include '@blocks/instagram.twig' %}
+{% endblock %}

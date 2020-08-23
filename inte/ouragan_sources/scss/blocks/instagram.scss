@@ -1,0 +1,76 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+.block-instagram {
+    padding: 60px 0 0;
+    text-align: center;
+    background-color: $white;
+
+    @media screen and (min-width: $desktop-small) {
+        padding: 100px 0;
+    }
+
+    .text {
+        font-size: 15px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .title2 {
+        font-size: 30px;
+        letter-spacing: -0.38px;
+        margin-bottom: 30px;
+        font-weight: 400;
+        line-height: 34px;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 70px;
+            font-size: 34px;
+        }
+    }
+
+    .list-item {
+        @media screen and (min-width: $tablet-medium) {
+            display: flex;
+        }
+
+        .slick-list {
+            @media screen and (max-width: $tablet-medium - 1) {
+                overflow: initial;
+            }
+        }
+
+        a {
+            position: relative;
+            overflow: hidden;
+
+            @media screen and (min-width: $tablet-medium) {
+                width: 20%;
+            }
+
+            @media screen and (max-width: $tablet-medium - 1) {
+                padding: 0 7px;
+            }
+
+            &:not(:first-child) {
+                margin-left: 15px;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                transition: all .5s;
+            }
+        }
+    }
+}

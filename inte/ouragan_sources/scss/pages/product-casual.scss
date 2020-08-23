@@ -1,0 +1,15 @@
+@import '../includes/variables';
+
+.product-casual-body {
+    .block-information-general-product {
+        background-color: $pale-grey;
+
+        .list-item .item .name {
+            color: $cloudy-blue;
+        }
+    }
+
+    .block-list-product .title {
+        color: $pale;
+    }
+}

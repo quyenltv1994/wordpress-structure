@@ -1,0 +1,286 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} journal-html{% endblock %}
+{% block bodyclass %}{{ parent() }} journal-body{% endblock %}
+
+{% block title %}journal - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-journal">
+        {% include '@blocks/popup/popup-filter.twig' %}
+        <div class="wrapper">
+            <ul class="breadcrumbs">
+                <li class="active">
+                    <a href="">Page d’accueil</a>
+                </li>
+                <li>
+                    <a href="">Journal</a>
+                </li>
+            </ul>
+
+            <div class="top-journal">
+                <h1 class="title">Journal</h1>
+                <p class="total">24 Articles</p>
+                <p class="descriptions">Et quoniam inedia gravi adflictabantur, locum petivere Paleas nomine,<br>vergentem
+                    in mare, valido muro firmatum, ubi conduntur</p>
+            </div>
+
+            <div class="group-filter-category">
+                <ul>
+                    <li class="active">
+                        <a href="">Cat 1</a>
+                    </li>
+                    <li>
+                        <a href="">Cat 2</a>
+                    </li>
+                    <li>
+                        <a href="">Cat 3</a>
+                    </li>
+                    <li>
+                        <a href="">Cat 4</a>
+                    </li>
+                    <li>
+                        <a href="">Cat 5</a>
+                    </li>
+                </ul>
+            </div>
+
+{#            <div class="group-dropdown filter-bar">#}
+{#                <a href="" data-popup="popup-filter">Filtrer par <span class="icon-bar"><i></i></span></a>#}
+{#            </div>#}
+
+            <div class="row list-journal">
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Carte cadeau : 8 belles raisons d’offrir un chapeau !</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Grande braderie de lille</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8 bonnes raisons de répondre : une carte cadeau pour un…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Wax Hat</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8 bonnes raisons de répondre : une carte cadeau pour un…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Carte cadeau : 8 belles raisons d’offrir un chapeau !</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Grande braderie de lille</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8 bonnes raisons de répondre : une carte cadeau pour un…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Wax Hat</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8 bonnes raisons de répondre : une carte cadeau pour un…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Carte cadeau : 8 belles raisons d’offrir un chapeau !</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Grande braderie de lille</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8 bonnes raisons de répondre : une carte cadeau pour un…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Wax Hat</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8 bonnes raisons de répondre : une carte cadeau pour un…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Carte cadeau : 8 belles raisons d’offrir un chapeau !</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Grande braderie de lille</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8 bonnes raisons de répondre : une carte cadeau pour un…</p>
+                    </div>
+                </div>
+
+                <div class="col-4 item-journal">
+                    <a href="" class="link-full"></a>
+
+                    <div class="image">
+                        <img src="assets/images/DIFFUSER-4003.jpg" alt="">
+                    </div>
+
+                    <div class="info">
+                        <p class="category">Categories</p>
+                        <p class="name">Wax Hat</p>
+                        <p class="descriptions">Chaque année c’est le même casse-tête, grande envie de faire vraiment
+                            plaisir, mais qu’offrir ? Voici 8 bonnes raisons de répondre : une carte cadeau pour un…</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result">
+                <p class="text">Vous avez vu 16 produits sur 24.</p>
+                <div class="process">
+                    <div class="progress-bar" style="width: 20%">
+                    </div>
+                </div>
+                <a href="" class="btn-border">CHARGER PLUS</a>
+            </div>
+
+            <div class="pagination">
+                <a class="prev page-numbers" href="http://mlle-chapeau.local/fr/category/category-02//page/3">Précédente</a>
+                <a class="page-numbers" href="http://mlle-chapeau.local/fr/category/category-02/">1</a>
+                <a class="page-numbers" href="http://mlle-chapeau.local/fr/category/category-02//page/2">2</a>
+                <a class="page-numbers" href="http://mlle-chapeau.local/fr/category/category-02//page/3">3</a>
+                <span aria-current="page" class="page-numbers current">4</span>
+                <a class="page-numbers" href="http://mlle-chapeau.local/fr/category/category-02//page/5">5</a>
+                <a class="page-numbers" href="http://mlle-chapeau.local/fr/category/category-02//page/6">6</a>
+                <a class="page-numbers" href="http://mlle-chapeau.local/fr/category/category-02//page/7">7</a>
+                <a class="next page-numbers" href="http://mlle-chapeau.local/fr/category/category-02//page/5">Suivant</a> </div>
+        </div>
+    </div>
+
+    {% include '@blocks/instagram.twig' %}
+{% endblock %}

@@ -1,0 +1,30 @@
+@import '../../includes/variables';
+
+#popup-share-link {
+    .wrap-info .info {
+        width: 100%;
+    }
+
+    .group-social {
+        .btn-full {
+            margin-bottom: 15px;
+
+            i {
+                margin-left: 2px;
+
+                &.icon-mail {
+                    font-weight: bold;
+                    position: relative;
+                    left: 6px;
+
+                    &:before {
+                        font-size: 19px;
+                        top: 50%;
+                        position: absolute;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}

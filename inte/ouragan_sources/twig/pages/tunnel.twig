@@ -1,0 +1,248 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} validation-html{% endblock %}
+{% block bodyclass %}{{ parent() }} validation-body{% endblock %}
+
+{% block title %}validation - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-validation">
+        <div class="wrapper">
+            <form action="#" data-parsley-validate>
+                <div class="row">
+                    <div class="col-6 col-offset-1 col-left">
+                        <h2 class="title2">Validation de votre commande</h2>
+                        <p class="label-checkbox">Ceci est un cadeau ?</p>
+                        <ul class="checkbox-group">
+                            <li>
+                                <input type="checkbox" value="">
+                                <label>Il mérite une attention particulière</label>
+                            </li>
+                        </ul>
+
+                        <div class="list-steps">
+                            <div class="item step1">
+                                <p class="title-step">
+                                    <span>1</span> Adresse de facturation
+                                </p>
+
+                                <div class="form-group">
+                                    <label>Prénom*</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nom*</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nom de l'entreprise (facultatif)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Pays</label>
+                                    <select class="form-select2">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Numéro et nom de rue*</label>
+                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control"
+                                           placeholder="Appartement, code porte, bureau, etc (optionnel)">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Appartement, code porte, bureau, etc (optionnel)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Ville*</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Code postal*</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Téléphone*</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Adresse email*</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <ul class="checkbox-group">
+                                    <li>
+                                        <input type="checkbox" value="">
+                                        <label>Expédier à une adresse différente ?</label>
+                                    </li>
+                                </ul>
+
+                                <div class="form-group">
+                                    <label>Notes de commande (facultatif)</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="item step2">
+                                <p class="title-step"><span>2</span>Méthode de livraison</p>
+
+                                <ul class="checkbox-group">
+                                    <li>
+                                        <input type="radio" value="" name="step" checked>
+                                        <label><strong>Colissimo</strong>
+                                            <br><strong>France :</strong> Délai de livraison : Livraison dans un délai
+                                            indicatif
+                                            de 8 jours<span>15,00 €</span></label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="" name="step">
+                                        <label><strong>Europe</strong>
+                                            <br><strong>Délai de livraison :</strong> Livraison dans un délai indicatif
+                                            de
+                                            15
+                                            jous<span>35,00 €</span></label>
+                                    </li>
+
+                                    <li>
+                                        <input type="radio" value="" name="step">
+                                        <label><strong>Chez Mademoiselle Chapeaux</strong>
+                                            <br><strong>Délai de livraison :</strong> Retrait en magasin
+                                            <br>Le meilleur prix et la livraison la plus
+                                            rapide<span>Gratuit</span></label>
+                                    </li>
+                                </ul>
+
+                                <p class="des">Hors d’un pays européen ?
+                                    <br>N ‘hésitez pas à contacter notre service client.</p>
+
+                                <div class="form-group">
+                                    <label>Adresse email*</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="item step3">
+                                <p class="title-step"><span>3</span>Informations de paiement</p>
+
+                                <div class="list-cards">
+                                    <img src="assets/images/icon-cb.jpg" alt="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Votre nom complet tel qu'il apparaît sur votre carte*</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Numéro de carte*</label>
+                                    <input type="text" class="form-control card" placeholder="1111 2222 4444 5555">
+                                </div>
+
+                                <div class="wrap-form-group">
+                                    <div class="form-group">
+                                        <label>Date d'expiration*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Code de sécurité*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                                <p class="note">*champs obligatoires</p>
+
+                                <ul class="checkbox-group">
+                                    <li>
+                                        <input type="checkbox" name="checkbox2" value="" required="">
+                                        <label>J’accepte les Conditions Générales de vente, et consens au traitement de
+                                            mes
+                                            données, conformément à la Politique de Confidentialité de Mademoiselle
+                                            Chapeaux</label>
+                                    </li>
+                                </ul>
+
+                                <p class="text-verify">Votre paiement est vérifié et sécurisé grâce au système 3D
+                                    Secure</p>
+
+                                <div class="list-payments">
+                                    <img src="assets/images/icon-secure.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-offset-right-1 col-right">
+                        <div class="wrap-cart-totals">
+                            <div class="cart-totals">
+                                <div class="item-price item">
+                                    <p>Sous total TTC</p>
+                                    <strong>295 €</strong>
+                                </div>
+
+                                <div class="item-price item">
+                                    <p>dont TVA</p>
+                                    <strong>10 €</strong>
+                                </div>
+
+                                <div class="item-livraison item">
+                                    <div class="wrap-livraison">
+                                        <p>Livraison :</p>
+                                        <strong>10 €</strong>
+                                    </div>
+                                </div>
+
+                                <div class="item-total item">
+                                    <p>TOTAL TTC</p>
+                                    <strong>310,65 €</strong>
+                                </div>
+                            </div>
+
+                            <button class="btn-full black">Valider la commande</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

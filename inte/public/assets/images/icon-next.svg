@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>01-Electrons/Icons-Nav2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="LOT-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-HOME" transform="translate(-201.000000, -5026.000000)">
+            <g id="Group-10" transform="translate(202.000000, 4442.000000)">
+                <g id="01-Electrons/Icons-Nav2" transform="translate(0.000000, 585.000000)">
+                    <circle id="Oval-Copy-3" stroke="#F3EEE7" stroke-width="1" cx="29" cy="29" r="29"></circle>
+                    <g id="01-Electrons/icon-slider" transform="translate(24.000000, 20.000000)" fill="#000000" fill-rule="nonzero">
+                        <path d="M9.80928854,9.05434783 L0.912055336,0.157114625 C0.70256917,-0.0523715415 0.366600791,-0.0523715415 0.157114625,0.157114625 C-0.0523715415,0.366600791 -0.0523715415,0.70256917 0.157114625,0.912055336 L8.67490119,9.4298419 L0.157114625,17.9476285 C-0.0523715415,18.1571146 -0.0523715415,18.493083 0.157114625,18.7025692 C0.259881423,18.805336 0.398221344,18.8606719 0.532608696,18.8606719 C0.666996047,18.8606719 0.805335968,18.8092885 0.908102767,18.7025692 L9.80533597,9.80533597 C10.0148221,9.59980237 10.0148221,9.25988142 9.80928854,9.05434783 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

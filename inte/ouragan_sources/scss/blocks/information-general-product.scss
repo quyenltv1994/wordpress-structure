@@ -1,0 +1,14 @@
+@import '../includes/variables';
+
+.block-information-general-product {
+    background-color: $pale;
+    padding: 40px 0 20px;
+
+    @media screen and (min-width: $desktop-small) {
+        padding: 120px 0 100px;
+    }
+
+    @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+        padding: 50px 0;
+    }
+}

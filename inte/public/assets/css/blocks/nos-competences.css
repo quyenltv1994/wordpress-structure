@@ -1,0 +1,52 @@
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+/*
+
+  //Returns true if ouragan is in --dev mode
+
+  @if is_dev_mode() {
+    * {
+      background: red !important;
+    }
+  }
+
+*/
+.block-nos-competences {
+  padding: 80px 0;
+  background-color: #03011A;
+  color: #fff;
+}
+
+.block-nos-competences .link {
+  color: #fff;
+}
+
+.block-nos-competences .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.block-nos-competences .list-item .item {
+  width: calc(33.33% - 20px);
+}
+
+.block-nos-competences .list-item .item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.block-nos-competences .list-item .item .icon {
+  margin-bottom: 20px;
+}
+
+.block-nos-competences .list-item .item .title-item {
+  font-size: 24px;
+  line-height: 44px;
+  margin-bottom: 10px;
+}
+
+.block-nos-competences .list-item .item .descriptions {
+  opacity: 0.6;
+}
+/*# sourceMappingURL=nos-competences.css.map */

@@ -1,0 +1,124 @@
+@import '../../includes/variables';
+
+#popup-filter {
+    padding: 30px 20px 0;
+
+    @media screen and (min-width: $tablet-medium) {
+        padding: 30px 20px 30px 40px;
+    }
+
+    .title-top-filter {
+        padding-bottom: 27px;
+        text-transform: uppercase;
+        position: relative;
+
+        @media screen and (min-width: $tablet-medium) {
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        &:after {
+            @media screen and (max-width: $tablet-medium - 1) {
+                content: '';
+                height: 1px;
+                width: calc(100% + 40px);
+                background-color: #e8e8e8;
+                position: absolute;
+                bottom: 0;
+                left: -20px;
+            }
+        }
+    }
+
+    .item-filter {
+        padding: 20px 0;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: calc(100% + 60px);
+            height: 1px;
+            background-color: #e8e8e8;
+            position: absolute;
+            bottom: 0;
+            left: -40px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .detail {
+            position: absolute;
+            top: 13px;
+            right: 15px;
+            font-size: 17px;
+            line-height: 22px;
+            color: $steel;
+            border-bottom: 1px solid $steel;
+        }
+    }
+
+    .group-btn {
+        display: flex;
+        align-items: center;
+        padding: 25px 0;
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            flex-direction: column;
+        }
+
+        .btn {
+            min-width: 130px;
+
+            @media screen and (min-width: $tablet-medium) {
+                margin-left: 45px;
+            }
+        }
+
+        .btn-border {
+            @media screen and (max-width: $tablet-medium - 1) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .bottom-filter {
+        font-size: 20px;
+        line-height: 28px;
+        background-color: $ice;
+        padding: 25px 0;
+        position: relative;
+
+        @media screen and (min-width: $tablet-medium) {
+            padding: 45px 0;
+        }
+
+        &:before {
+            content: '';
+            background-color: $ice;
+            position: absolute;
+            left: -50px;
+            top: 0;
+            right: -50px;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            a {
+                color: #7d7d87;
+                border-bottom: 1px solid #7d7d87;
+
+                @media screen and (max-width: $tablet-medium - 1) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

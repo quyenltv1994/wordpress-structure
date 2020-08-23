@@ -1,0 +1,92 @@
+@import '../includes/variables';
+
+.social {
+    li {
+        display: inline-block;
+        margin-right: 20px;
+
+        i {
+            font-size: 21px;
+        }
+    }
+}
+
+.social-contact {
+    .title-large {
+        margin-bottom: 30px;
+    }
+
+    li {
+        display: block;
+        line-height: 35px;
+
+        i {
+            font-size: 21px;
+            margin-right: 15px;
+            color: $pale-aqua;
+            position: relative;
+            top: 3px;
+        }
+    }
+}
+
+.group-social {
+    .addtoany_shortcode {
+        .addtoany_list {
+            a {
+                border: 1px solid $dark-grey !important;
+                padding: 8px 20px 4px !important;
+                font-size: 16px !important;
+                background-color: $white;
+                margin-bottom: 15px;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                align-items: center;
+                transition: all .4s;
+
+                &:hover {
+                    background-color: $black;
+                    color: $white;
+
+                    svg {
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
+
+                .a2a_svg {
+                    background-color: transparent !important;
+                    height: 21px !important;
+                    width: 21px !important;
+                    line-height: 18px !important;
+                    overflow: initial;
+                    margin-left: 3px;
+                    position: relative;
+                    top: -4px;
+                    opacity: 1 !important;
+                }
+
+                .a2a_label {
+                    position: static !important;
+                    clip: initial;
+                    clip-path: none;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    width: auto !important;
+                    height: auto !important;
+                    opacity: 1 !important;
+                }
+
+                svg {
+                    width: 21px;
+
+                    path {
+                        fill: $black;
+                    }
+                }
+            }
+        }
+    }
+}

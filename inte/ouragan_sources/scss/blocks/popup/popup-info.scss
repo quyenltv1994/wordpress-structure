@@ -1,0 +1,33 @@
+.popup-info {
+    .icon {
+        margin-bottom: 50px;
+    }
+
+    .descriptions {
+        h3 {
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 35px;
+            margin-bottom: 40px;
+        }
+    }
+
+    table {
+        width: 100%;
+        margin: -20px 0 30px;
+        
+        th {
+            font-weight: 400;
+        }
+
+        th , td {
+            padding: 10px 4px;
+            border: 1px solid $black;
+        }
+    }
+}

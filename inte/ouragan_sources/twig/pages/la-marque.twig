@@ -1,0 +1,211 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} marque-html{% endblock %}
+{% block bodyclass %}{{ parent() }} scroll-link marque-page{% endblock %}
+
+{% block title %}La Marque - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-la-marque" data-color="#fff">
+        <div class="wrapper">
+            <h2 class="title-large">Notre Histoire</h2>
+            <div class="video">
+                <img src="assets/images/video.jpg" alt="">
+                <a class="play-video" data-fancybox="" href="https://www.youtube.com/watch?v=bitnDUoOStQ&amp;list">
+                    <i class="icon-play"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="list-item">
+            <div class="row item full">
+                <div class="col-7 descriptions">
+                    <p class="title2">Je porte un chapeau tous les jours.
+                        Je les collectionne. Je les chine.
+                        Je les personnalise. Mademoiselle Chapeaux est née de ma folle passion pour ce complice
+                        de notre vestiaire qui, en clin d’oeil, réveille une silhouette, un style, une
+                        humeur. <img class="logo-la-marque" src="assets/images/icon-logo.svg" alt=""></p>
+
+                    <div class="des">
+                    <p><strong>100% fait main à Paris</strong></p>
+                    <p>Nos chapelières autrefois au service des maisons de Haute Couture les plus prestigieuses,
+                        façonnent chaque année des milliers de demandes des plus simples au plus insolites. </p>
+                    </div>
+                </div>
+
+                <div class="col-5 image">
+                    <img src="assets/images/bou2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="row item">
+                <div class="col-7 descriptions">
+                    <div class="des">
+                    <p><strong>Titre à définir, Titre à définir</strong></p>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
+                    </div>
+                </div>
+
+                <div class="col-5 image">
+                    <img src="assets/images/bou2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap-btn">
+            <a href="" class="btn-full black">En savoir plus</a>
+        </div>
+    </div>
+
+    <div class="block-la-marque two" data-color="#f3f7fb" >
+        <div class="wrapper">
+            <h2 class="title-large">Notre Histoire</h2>
+            <div class="video">
+                <img src="assets/images/video.jpg" alt="">
+                <a class="play-video" data-fancybox="" href="https://www.youtube.com/watch?v=bitnDUoOStQ&amp;list">
+                    <i class="icon-play"></i>
+                </a>
+            </div>
+
+            <p class="title2">Nos chapelières autrefois au service des maisons de Haute Couture les plus prestigieuses,
+                façonnent chaque année des milliers de demandes des plus simples au plus insolites.</p>
+        </div>
+
+        <div class="list-item">
+            <div class="row item ">
+                <div class="col-7 descriptions">
+                    <div class="des">
+                    <p><strong>Titre à définir, Titre à définir</strong></p>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
+                    </div>
+                </div>
+
+                <div class="col-5 image">
+                    <img src="assets/images/bou2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="row item full">
+                <div class="col-7 descriptions">
+                    <div class="des">
+                    <p><strong>Titre à définir, Titre à définir</strong></p>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
+                    </div>
+                    <div class="des">
+                    <p><strong>Titre à définir, Titre à définir</strong></p>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
+                    </div>
+                </div>
+
+                <div class="col-5 image">
+                    <img src="assets/images/bou2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="row item item full-wrapper">
+                <div class="col-7 descriptions">
+                    <p class="title2">Nos chapelières autrefois au service des maisons de Haute Couture les plus
+                        prestigieuses.</p>
+
+                    <div class="des">
+                    <p><strong>Titre à définir, Titre à définir</strong></p>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
+                    </div>
+                </div>
+
+                <div class="col-5 image">
+                    <img src="assets/images/bou2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap-btn">
+            <a href="" class="btn-full black">En savoir plus</a>
+        </div>
+    </div>
+
+    <div class="block-la-marque three" data-color="#f4eff6" id="test1">
+        <div class="wrapper">
+            <h2 class="title-large">Notre Histoire</h2>
+            <div class="video">
+                <img src="assets/images/video.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="list-item">
+            <div class="row item">
+                <div class="col-7 descriptions">
+                    <p class="title2">Des matières éthiques, un savoir-faire traditionnel et une relation de
+                        confiance avec nos ateliers, un circuit court réduisant l'impact environnemental, des
+                        packagings écologiques et un style unique.</p>
+                </div>
+
+                <div class="col-5 image">
+                    <img src="assets/images/bou2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="row item full">
+                <div class="col-7 descriptions">
+                    <div class="des">
+                    <p><strong>Titre à définir, Titre à définir</strong></p>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi. t
+                        quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+                        qui officia deserunt mollitia animi.</p>
+                    </div>
+                </div>
+
+                <div class="col-5 image">
+                    <img src="assets/images/bou2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap-btn">
+            <a href="" class="btn-full black">En savoir plus</a>
+        </div>
+    </div>
+
+    {% include '@blocks/services.twig' with {"services_data_color" : "data-color='#fff'"} %}
+{% endblock %}

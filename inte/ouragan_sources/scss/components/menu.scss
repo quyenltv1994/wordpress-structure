@@ -1,0 +1,238 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+
+.menu {
+    margin-top: 25px;
+    position: relative;
+
+    @media screen and (min-width: $desktop-small + 1) {
+        display: flex;
+    }
+
+    > li {
+        @media screen and (min-width: $desktop-small + 1) {
+            margin: 0 15px;
+        }
+
+        @media screen and (max-width: $desktop-small) {
+            &.active {
+                position: absolute;
+                width: calc(100% + 40px);
+                top: -60px;
+                left: -20px;
+                padding: 0 20px;
+                height: 100vh;
+                z-index: 999;
+                background-color: $white;
+            }
+        }
+
+        &.active {
+            .wrap-sub-menu {
+                top: 35px;
+                transition-delay: 0s;
+
+                .sub-menu > li {
+                    opacity: 1;
+                    transition-duration: 0.5s;
+                    transition-delay: 0.5s;
+                }
+            }
+        }
+
+        > a {
+            position: relative;
+            z-index: 9;
+
+            @media screen and (min-width: $desktop-small + 1) {
+                font-size: 15px;
+            }
+        }
+
+        &.icon-boutique {
+            position: relative;
+            font-family: $font-1 !important;
+
+            &:before {
+                display: none;
+            }
+
+            a {
+                padding-right: 20px;
+                font-family: $font-1;
+                font-weight: 500;
+                text-transform: uppercase;
+
+                &:after {
+                    content: '\e904';
+                    font-family: 'icomoon' !important;
+                    position: absolute;
+                    margin-left: 8px;
+                    top: -6px;
+                    font-size: 20px;
+
+                    @media screen and (max-width: $desktop-small) {
+                        top: 7px;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-item-has-children {
+        > a {
+            &:after {
+                font-family: 'icomoon' !important;
+                content: '\e902';
+                font-size: 4px;
+                display: inline-block;
+                position: relative;
+                margin-left: 8px;
+                top: -3px;
+
+                @media screen and (max-width: $desktop-small) {
+                    @include positionRightMiddle(0);
+                    transform: translateY(-50%) rotate(-90deg);
+                }
+            }
+        }
+
+        .menu-item-has-children {
+            > a:after {
+                @media screen and (min-width: $desktop-small + 1) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $desktop-small) {
+        .menu-item-has-children {
+            &.active {
+                .wrap-sub-menu {
+                    display: block;
+
+                    &.active {
+                        position: relative;
+                        top: -38px;
+                        z-index: 9;
+                        background: $white;
+                    }
+                }
+
+                > ul {
+                    display: block !important;
+                }
+
+                > a {
+                    padding-left: 25px;
+
+                    &:after {
+                        position: absolute;
+                        right: auto;
+                        left: 0;
+                        top: 50%;
+                        font-size: 13px;
+                        transform: translateY(-50%);
+                        content: '\e900';
+                        font-family: 'icomoon' !important;
+                    }
+                }
+            }
+        }
+    }
+
+    li {
+        a {
+            @media screen and (max-width: $desktop-small) {
+                display: block;
+                position: relative;
+                padding: 13px 0;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .wrap-sub-menu {
+        @media screen and (min-width: $desktop-small + 1) {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -450px;
+            background-color: $white;
+            transition: all 1s;
+            transition-delay: 0.5s;
+            width: 820px;
+            border: 1px solid #f3eeee;
+            margin-left: -23px;
+        }
+
+        @media screen and (max-width: $desktop-small) {
+            display: none;
+        }
+
+        .sub-menu {
+            font-weight: 400;
+
+            @media screen and (min-width: $desktop-small + 1) {
+                display: flex;
+                justify-content: space-between;
+                padding: 120px 70px 50px;
+            }
+
+            > li {
+                @media screen and (min-width: $desktop-small + 1) {
+                    opacity: 0;
+                    transition-duration: 0.5s;
+                    transition-delay: 0.2s;
+                }
+
+                > a {
+                    @media screen and (min-width: $desktop-small + 1) {
+                        color: $steel;
+                        text-transform: uppercase;
+                        margin-bottom: 20px;
+                        display: block;
+                    }
+
+                    span {
+                        font-size: 17px;
+                        text-transform: capitalize;
+                        font-weight: 500;
+                        margin-top: 20px;
+                        display: block;
+                        color: #000;
+
+                    }
+
+
+                    img + span {
+                        @media screen and (min-width: $desktop-small + 1) {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                ul {
+                    @media screen and (max-width: $desktop-small) {
+                        display: none;
+                    }
+
+                    a {
+                        @media screen and (min-width: $desktop-small + 1) {
+                            text-transform: capitalize;
+                            font-size: 17px;
+                            line-height: 33px;
+                        }
+
+                        @media screen and (max-width: $desktop-small) {
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

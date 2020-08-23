@@ -1,0 +1,167 @@
+{% extends '../layouts/default.twig' %}
+
+{% block htmlclass %}{{ parent() }} compte-html{% endblock %}
+{% block bodyclass %}{{ parent() }} compte-body{% endblock %}
+
+{% block title %}compte - {{ parent() }}{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/global/site.js', 5) }}
+    {% endif %}
+{% endif %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool: https://search.google.com/structured-data/testing-tool
+    Documentation: https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http://my-website-url.com/#website",
+            "url": "http://my-website-url.com/",
+            "name": "Name of the website",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "http://my-website-url.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="block-comple">
+        <div class="wrapper">
+            <div class="title-box">
+                <h2 class="title2">Bonjour Camille</h2>
+                <p class="sub-title">Bienvenue sur votre compte personnel</p>
+            </div>
+
+            <div class="tab-navigate">
+                <ul class="nav-tabs">
+                    <li class="nav-item is-active">
+                        <a class="nav-link">Détails personnels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Commandes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Adresses</a>
+                    </li>
+                </ul>
+            </div>
+
+            <h3 class="title-form">Camille Pigeon</h3>
+            <p class="note">*champs obligatoires</p>
+
+            <form id="form" data-parsley-validate="">
+                <div class="form-row row">
+                    <div class="col-6">
+                        <div class="form-group field">
+                            <label>Prénom*</label>
+                            <input type="text" class="form-control" name="Prénom" placeholder="Camille" required="">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group field">
+                            <label>Email*</label>
+                            <input type="email" name="email" class="form-control" placeholder="Camille.pigeon@gmail.com"
+                                   required="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row row">
+                    <div class="col-6">
+                        <div class="form-group field">
+                            <label>Nom*</label>
+                            <input type="text" name="Nom" class="form-control" placeholder="Pigeon" required="">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group field">
+                            <label>Telephone*</label>
+                            <input type="tel" name="phone" class="form-control" placeholder="Téléphone" required=""
+                                   data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group form-date">
+                    <label>Date de naissance</label>
+
+                    <div class="group-select">
+                        <select class="form-select2" data-placeholder="06">
+                            <option></option>
+                            <option value="1">06</option>
+                            <option value="2">07</option>
+                            <option value="3">08</option>
+                        </select>
+
+                        <select class="form-select2" data-placeholder="09">
+                            <option></option>
+                            <option value="1">09</option>
+                            <option value="2">10</option>
+                            <option value="3">11</option>
+                        </select>
+
+                        <select class="form-select2">
+                            <option value="1">1998</option>
+                            <option value="2">1999</option>
+                            <option value="3">2000</option>
+                            <option value="4">2001</option>
+                            <option value="5">2002</option>
+                            <option value="6">2003</option>
+                            <option value="7">2004</option>
+                            <option value="8" selected>2005</option>
+                            <option value="9">2006</option>
+                            <option value="10">2007</option>
+                            <option value="11">2008</option>
+                            <option value="12">2009</option>
+                            <option value="13">2010</option>
+                            <option value="14">2011</option>
+                            <option value="15">2012</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h4 class="title-small">Mot de passe</h4>
+
+
+                <div class="form-group">
+                    <label>Mot de passe actuel*</label>
+                    <input minlength="6" data-parsley-minlength="6" type="password" name="Mot de passe actuel"
+                           id="password_current" class="form-control" data-parsley-trigger="input change focusout" data-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label>Nouveau mot de passe*</label>
+                    <input minlength="6" data-parsley-minlength="6" id="password" type="password"
+                           name="Nouveau mot de passe" data-parsley-trigger="input change focusout" class="form-control" data-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label>Confirmer le nouveau mot de passe*</label>
+                    <input minlength="6" data-parsley-minlength="6" data-parsley-trigger="input change focusout" data-parsley-equalto="#password" type="password"
+                           name="Confirmer le nouveau mot de passe" id="cpassword" class="form-control" data-required="true">
+                </div>
+
+                <h4 class="title-small">Newsletter</h4>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" value="" name="checkbox">
+                    <label>Je souhaite m’abonner à la newsletter de Mademoiselle Chapeaux</label>
+                </div>
+
+                <button class="btn-full black">Enregistrer</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

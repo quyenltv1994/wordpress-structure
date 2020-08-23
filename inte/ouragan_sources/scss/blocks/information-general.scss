@@ -1,0 +1,74 @@
+@import '../includes/variables';
+
+.block-information-general {
+    padding: 44px 0;
+
+    @media screen and (min-width: $desktop-small) {
+        padding: 125px 0 85px;
+    }
+
+    @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+        padding: 50px 0;
+    }
+
+    .list-item {
+        margin-bottom: 25px;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 50px;
+        }
+
+        .col-8 {
+            @media screen and (max-width: $tablet-medium - 1) {
+                .name {
+                    position: absolute;
+                    left: 0;
+                    bottom: -30px;
+                }
+            }
+        }
+
+        .item {
+            @media screen and (max-width: $tablet-medium - 1) {
+                margin-bottom: 30px;
+            }
+
+            .title2 {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                text-align: left;
+            }
+
+            .image {
+                margin-bottom: 11px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .name {
+                font-weight: 600;
+                font-size: 15px;
+                color: $pale-brown;
+            }
+        }
+    }
+
+    .title2 {
+        max-width: 748px;
+        margin: 0 auto;
+
+        @media screen and (min-width: $tablet-medium) {
+            text-align: center;
+        }
+    }
+
+    > .title2 {
+        @media screen and (max-width: $tablet-medium - 1) {
+            text-align: center;
+            margin-top: 60px;
+        }
+    }
+}

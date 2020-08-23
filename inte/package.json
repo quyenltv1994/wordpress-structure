@@ -1,0 +1,18 @@
+{
+  "name": "starter-project-example-name",
+  "scripts": {
+    "ouragan": "node node_modules/@fidesioparis/ouragan/ouragan.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fidesioparis/ouragan": "^1.0.19",
+    "gsap": "2.0.2",
+    "parsleyjs": "^2.9.2",
+    "scrollmagic": "^2.0.7",
+    "select2": "^4.0.13",
+    "slick-carousel": "^1.8.1",
+    "smooth-scrollbar": "^8.5.1",
+    "sticky-sidebar": "^3.3.1"
+  }
+}

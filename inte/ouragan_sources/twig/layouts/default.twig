@@ -1,0 +1,31 @@
+{% extends '../layout.twig' %}
+
+{% block htmlclass %}layout-default-html{% endblock %}
+{% block bodyclass %}layout-default{% endblock %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_css('public/assets/css/layouts/default.css', 4) }}
+    {% endif %}
+{% endif %}
+
+{% if is_ouragan_used is defined %}
+    {% if is_ouragan_used %}
+        {{ ouragan_include_once_js('public/assets/js/layouts/default.js', 4) }}
+    {% endif %}
+{% endif %}
+
+{% block header %}
+    {% include '../includes/header.twig' %}
+{% endblock %}
+
+{% block content %}
+    {{ parent() }}
+    <div class="wrapper clearfix">
+        {% block content_inner %}{% endblock %}
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include '../includes/footer.twig' %}
+{% endblock %}

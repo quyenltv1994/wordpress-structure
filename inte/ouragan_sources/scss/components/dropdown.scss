@@ -1,0 +1,137 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+.group-dropdown {
+    width: 100%;
+    position: relative;
+
+    @media screen and (min-width: $tablet-medium) {
+        width: 146px;
+    }
+
+    &:not(:first-child) {
+        margin-left: 15px;
+    }
+
+    &.active {
+        > a {
+            border: 1px solid $dark-grey;
+        }
+
+        .dropdown {
+            display: block;
+        }
+    }
+
+
+    &:hover {
+        > a {
+            border: 1px solid $dark-grey;
+        }
+    }
+
+    > a {
+        display: inline-block;
+        width: 100%;
+        padding: 17px 15px 13px;
+        border: 1px solid #979797;
+        position: relative;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        &:after {
+            content: '\e902';
+            font-family: 'icomoon' !important;
+            font-size: 4px;
+            display: inline-block;
+            margin-left: 9px;
+            position: absolute;
+            @include positionRightMiddle(15px);
+        }
+    }
+
+    .dropdown {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        border-left: 1px solid $light-peach;
+        border-right: 1px solid $light-peach;
+        border-bottom: 1px solid $light-peach;
+        display: none;
+
+
+        li:first-child {
+            a {
+                text-transform: capitalize;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 15px 15px 11px;
+            font-size: 14px;
+            text-transform: uppercase;
+            background-color: $white;
+
+            &:hover {
+                background-color: #f5f6f8;
+            }
+        }
+    }
+}
+
+.filter-bar {
+    > a {
+        &:after {
+            display: none;
+        }
+    }
+
+    .icon-bar {
+        position: absolute;
+        top: 14px;
+        right: 30px;
+
+        &:before {
+            content: '';
+            height: 1px;
+            width: 13px;
+            background-color: $dark-grey;
+            position: absolute;
+            top: 5px;
+            left: 2px;
+
+        }
+
+        &:after {
+            content: '';
+            height: 1px;
+            width: 13px;
+            background-color: $dark-grey;
+            position: absolute;
+            top: 15px;
+            left: 2px;
+        }
+
+        i {
+            &:before {
+                content: '';
+                height: 1px;
+                width: 18px;
+                background-color: $dark-grey;
+                position: absolute;
+            }
+
+            &:after {
+                content: '';
+                height: 1px;
+                width: 18px;
+                background-color: $dark-grey;
+                position: absolute;
+                top: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../includes/variables';
+
+.home {
+    .header-mobile {
+        @media screen and (max-width: $tablet-medium - 1) {
+            background-color: $white;
+        }
+    }
+
+    .block-banner {
+        @media screen and (max-width: $tablet-medium - 1) {
+            margin-top: 113px;
+        }
+    }
+}

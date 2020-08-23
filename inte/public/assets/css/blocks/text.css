@@ -1,0 +1,28 @@
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+/*
+
+  //Returns true if ouragan is in --dev mode
+
+  @if is_dev_mode() {
+    * {
+      background: red !important;
+    }
+  }
+
+*/
+.block-text {
+  background: #03011A;
+  padding: 80px 0;
+  color: #fff;
+}
+
+.block-text .wrapper {
+  max-width: 855px;
+}
+
+.block-text .descriptions {
+  font-size: 29px;
+  line-height: 44px;
+}
+/*# sourceMappingURL=text.css.map */

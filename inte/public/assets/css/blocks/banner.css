@@ -1,0 +1,68 @@
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+/*
+
+  //Returns true if ouragan is in --dev mode
+
+  @if is_dev_mode() {
+    * {
+      background: red !important;
+    }
+  }
+
+*/
+.block-banner {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.block-banner .wrapper {
+  padding: 200px 0;
+  height: 100%;
+}
+
+.block-banner .title {
+  font-size: 105px;
+  line-height: 115px;
+  color: #fff;
+}
+
+.block-banner .list-sub-title {
+  pointer-events: none;
+}
+
+.block-banner .list-sub-title .title {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.block-banner .link {
+  color: #fff;
+  width: 411px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+}
+
+.block-banner .link i {
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+
+.block-banner .logo-banner {
+  position: absolute;
+  bottom: -100px;
+  right: 30%;
+}
+
+.block-banner .icon-next-sec {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+}
+/*# sourceMappingURL=banner.css.map */

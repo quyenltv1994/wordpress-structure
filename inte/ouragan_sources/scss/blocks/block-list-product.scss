@@ -1,0 +1,35 @@
+@import '../includes/variables';
+
+.block-list-product {
+    padding: 50px 0;
+
+    @media screen and (min-width: $desktop-small) {
+        padding: 124px 0 152px;
+    }
+
+    .title {
+        color: $light-sky-blue;
+        margin-bottom: 30px;
+        text-align: center;
+
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 104px;
+        }
+    }
+
+    .list-product {
+        @media screen and (min-width: $tablet-medium) {
+            margin-bottom: 67px;
+        }
+
+        .product {
+            @media screen and (min-width: $tablet-medium) {
+                width: 33.33%;
+            }
+        }
+    }
+
+    .wrap-btn {
+        text-align: center;
+    }
+}

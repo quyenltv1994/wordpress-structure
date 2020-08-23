@@ -1,0 +1,87 @@
+@import '../includes/variables';
+
+.block-melanger-la-traditio {
+    @media screen and (max-width: $desktop-small - 1) {
+        padding: 52px 0 60px;
+    }
+
+    @media screen and (min-width: $tablet-medium) {
+        padding-top: 85px;
+    }
+
+    .list-product {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin: 0;
+
+        @media screen and (max-width: $tablet-medium - 1) {
+            display: none;
+        }
+
+        .item {
+            @media screen and (min-width: $tablet-medium) and (max-width: $desktop-small - 1) {
+                padding: 0 20px 20px;
+            }
+
+            &:first-child {
+                @media screen and (min-width: $desktop-small) {
+                    padding: 0 120px 0 calc((100% - 1350px) / 2);
+                    margin-top: -85px;
+                }
+            }
+
+            &:last-child {
+                @media screen and (min-width: $desktop-small) {
+                    padding-left: 120px;
+                    position: relative;
+                    top: 130px;
+                }
+            }
+
+            .image {
+                margin-bottom: 20px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .name-product {
+                font-size: 15px;
+                font-weight: bold;
+                color: $grey-teal;
+            }
+        }
+    }
+
+    .info {
+        max-width: 690px;
+
+        @media screen and (min-width: $desktop-small) {
+            margin-top: -26px;
+            padding-bottom: 80px;
+        }
+
+        .title {
+            color: #cde2db;
+            margin-bottom: 37px;
+
+            @media screen and (min-width: $tablet-medium) {
+                line-height: 71px;
+            }
+        }
+
+        .descriptions {
+            font-size: 20px;
+            line-height: 28px;
+            color: #3d3e4a;
+            margin-bottom: 50px;
+
+            p {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
